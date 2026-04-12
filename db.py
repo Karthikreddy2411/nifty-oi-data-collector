@@ -1,82 +1,70 @@
-import sqlite3
 import pandas as pd
-from config import DB_PATH
+from sqlalchemy import create_engine, Column, Integer, String, Float, MetaData, Table
 
-def get_connection():
-    """Returns a connection to the SQLite database."""
-    conn = sqlite3.connect(DB_PATH)
-    # Enable robust multithreading and performance
-    conn.execute("PRAGMA journal_mode=WAL")
-    return conn
+from config import DB_PATH, DATABASE_URL
+
+def get_engine():
+    """Returns an SQLAlchemy engine connected to Postgres or fallback SQLite."""
+    if DATABASE_URL:
+        # Use PostgreSQL from Railway/Render
+        # SQLAlchemy requires connection pooling tuning for some cloud workloads, 
+        # but defaults work fine for a single worker doing sequential writes.
+        engine = create_engine(DATABASE_URL)
+    else:
+        # Fallback to local SQLite DB
+        engine = create_engine(f"sqlite:///{DB_PATH}")
+    return engine
 
 def init_db():
-    """Initializes the database schema."""
-    conn = get_connection()
-    cursor = conn.cursor()
+    """Initializes the database schema using SQLAlchemy."""
+    engine = get_engine()
+    metadata = MetaData()
     
     # Table for granular options data for each strike
-    cursor.execute("""
-        CREATE TABLE IF NOT EXISTS options_data (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            timestamp TEXT,
-            spot_price REAL,
-            strike_price REAL,
-            ce_oi REAL,
-            pe_oi REAL,
-            ce_oi_change REAL,
-            pe_oi_change REAL,
-            ce_volume INTEGER,
-            pe_volume INTEGER
-        )
-    """)
+    options_table = Table('options_data', metadata,
+        Column('id', Integer, primary_key=True, autoincrement=True),
+        Column('timestamp', String),
+        Column('spot_price', Float),
+        Column('strike_price', Float),
+        Column('ce_oi', Float),
+        Column('pe_oi', Float),
+        Column('ce_oi_change', Float),
+        Column('pe_oi_change', Float),
+        Column('ce_volume', Integer),
+        Column('pe_volume', Integer)
+    )
     
     # Table for aggregated market summary and signals
-    cursor.execute("""
-        CREATE TABLE IF NOT EXISTS market_summary (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            timestamp TEXT,
-            spot_price REAL,
-            total_ce_oi REAL,
-            total_pe_oi REAL,
-            pcr REAL,
-            highest_ce_oi_strike REAL,
-            highest_pe_oi_strike REAL,
-            signal TEXT
-        )
-    """)
+    summary_table = Table('market_summary', metadata,
+        Column('id', Integer, primary_key=True, autoincrement=True),
+        Column('timestamp', String),
+        Column('spot_price', Float),
+        Column('total_ce_oi', Float),
+        Column('total_pe_oi', Float),
+        Column('pcr', Float),
+        Column('highest_ce_oi_strike', Float),
+        Column('highest_pe_oi_strike', Float),
+        Column('signal', String)
+    )
     
-    conn.commit()
-    conn.close()
+    # Create tables if they do not exist
+    metadata.create_all(engine)
 
 def save_options_data(df):
     """Saves granular options data (pandas DataFrame) to the database."""
     if df is None or df.empty:
         return
     
-    conn = get_connection()
-    df.to_sql("options_data", conn, if_exists="append", index=False)
-    conn.close()
+    engine = get_engine()
+    # Pandas makes it extremely easy to push to SQLAlchemy dynamically
+    df.to_sql("options_data", engine, if_exists="append", index=False)
 
 def save_market_summary(summary_dict):
     """Saves market summary and signals to the database."""
-    conn = get_connection()
-    cursor = conn.cursor()
-    
-    cursor.execute("""
-        INSERT INTO market_summary (
-            timestamp, spot_price, total_ce_oi, total_pe_oi, pcr, 
-            highest_ce_oi_strike, highest_pe_oi_strike, signal
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-    """, (
-        summary_dict.get("timestamp"),
-        summary_dict.get("spot_price"),
-        summary_dict.get("total_ce_oi"),
-        summary_dict.get("total_pe_oi"),
-        summary_dict.get("pcr"),
-        summary_dict.get("highest_ce_oi_strike"),
-        summary_dict.get("highest_pe_oi_strike"),
-        summary_dict.get("signal")
-    ))
-    
-    conn.commit()
-    conn.close()
+    if not summary_dict:
+        return
+        
+    engine = get_engine()
+    # Convert dict to one-row DataFrame to utilize SQLAlchemy push easily
+    df = pd.DataFrame([summary_dict])
+    df.to_sql("market_summary", engine, if_exists="append", index=False)

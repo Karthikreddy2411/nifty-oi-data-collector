@@ -17,6 +17,11 @@ HEADERS = {
 # Database Configurations
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.path.join(BASE_DIR, "nifty_data.db")
+DATABASE_URL = os.environ.get("DATABASE_URL")
+
+# Quick fix for Render/Railway PostgreSQL connection URLs 
+if DATABASE_URL and DATABASE_URL.startswith("postgres://"):
+    DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
 
 # Market Hours (IST)
 MARKET_START_HOUR = 9
