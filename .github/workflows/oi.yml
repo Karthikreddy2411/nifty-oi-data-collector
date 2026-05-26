@@ -1,6 +1,5 @@
-```yaml
-name: Collect Nifty OI Data
 
+name: Collect Nifty OI Data
 on:
   schedule:
     - cron: "*/5 3-10 * * 1-5"
@@ -37,4 +36,3 @@ jobs:
           git commit -m "Update OI data" || echo "No changes"
 
           git push
-```
