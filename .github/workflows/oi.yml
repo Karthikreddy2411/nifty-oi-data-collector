@@ -1,0 +1,40 @@
+```yaml
+name: Collect Nifty OI Data
+
+on:
+  schedule:
+    - cron: "*/5 3-10 * * 1-5"
+  workflow_dispatch:
+
+jobs:
+  collect-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install pandas requests nselib
+
+      - name: Run OI collector
+        run: |
+          python nifty_oi_collector.py
+
+      - name: Commit updated CSV
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+
+          git add data/*.csv
+
+          git commit -m "Update OI data" || echo "No changes"
+
+          git push
+```
