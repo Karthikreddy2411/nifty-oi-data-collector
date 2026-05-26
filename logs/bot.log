@@ -1,0 +1,1360 @@
+2026-05-26 10:13:02 [INFO    ] root — Logging initialised. Log file: /Users/karthikreddy/projects/oi based ai/logs/bot.log
+2026-05-26 10:13:02 [INFO    ] bot — 🤖 NIFTY Option Chain CSV Bot starting…
+2026-05-26 10:13:02 [INFO    ] bot — Loop interval: 60s | Market hours: 09:15–15:30 IST
+2026-05-26 10:13:02 [INFO    ] bot — ============================================================
+2026-05-26 10:13:02 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:13:02 IST
+2026-05-26 10:13:02 [INFO    ] bot — ============================================================
+2026-05-26 10:13:02 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:13:03 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:13:03 [INFO    ] downloader — Launching Chromium browser (headless=True)…
+2026-05-26 10:13:04 [INFO    ] downloader — Navigating to NSE Option Chain page…
+2026-05-26 10:13:04 [ERROR   ] downloader — Unexpected error in _download_once: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.nseindia.com/option-chain
+Call log:
+  - navigating to "https://www.nseindia.com/option-chain", waiting until "domcontentloaded"
+Traceback (most recent call last):
+  File "/Users/karthikreddy/projects/oi based ai/downloader.py", line 114, in _download_once
+    await page.goto(NSE_OPTION_CHAIN_URL, wait_until="domcontentloaded",
+  File "/Users/karthikreddy/projects/oi based ai/venv/lib/python3.9/site-packages/playwright/async_api/_generated.py", line 9045, in goto
+    await self._impl_obj.goto(
+  File "/Users/karthikreddy/projects/oi based ai/venv/lib/python3.9/site-packages/playwright/_impl/_page.py", line 552, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+  File "/Users/karthikreddy/projects/oi based ai/venv/lib/python3.9/site-packages/playwright/_impl/_frame.py", line 153, in goto
+    await self._channel.send(
+  File "/Users/karthikreddy/projects/oi based ai/venv/lib/python3.9/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+  File "/Users/karthikreddy/projects/oi based ai/venv/lib/python3.9/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.nseindia.com/option-chain
+Call log:
+  - navigating to "https://www.nseindia.com/option-chain", waiting until "domcontentloaded"
+
+2026-05-26 10:13:04 [WARNING ] downloader — Attempt 1 failed. Waiting 10s before retry…
+2026-05-26 10:13:14 [INFO    ] downloader — Download attempt 2 / 3
+2026-05-26 10:13:14 [INFO    ] downloader — Launching Chromium browser (headless=True)…
+2026-05-26 10:13:14 [INFO    ] downloader — Navigating to NSE Option Chain page…
+2026-05-26 10:13:15 [ERROR   ] downloader — Unexpected error in _download_once: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.nseindia.com/option-chain
+Call log:
+  - navigating to "https://www.nseindia.com/option-chain", waiting until "domcontentloaded"
+Traceback (most recent call last):
+  File "/Users/karthikreddy/projects/oi based ai/downloader.py", line 114, in _download_once
+    await page.goto(NSE_OPTION_CHAIN_URL, wait_until="domcontentloaded",
+  File "/Users/karthikreddy/projects/oi based ai/venv/lib/python3.9/site-packages/playwright/async_api/_generated.py", line 9045, in goto
+    await self._impl_obj.goto(
+  File "/Users/karthikreddy/projects/oi based ai/venv/lib/python3.9/site-packages/playwright/_impl/_page.py", line 552, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+  File "/Users/karthikreddy/projects/oi based ai/venv/lib/python3.9/site-packages/playwright/_impl/_frame.py", line 153, in goto
+    await self._channel.send(
+  File "/Users/karthikreddy/projects/oi based ai/venv/lib/python3.9/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+  File "/Users/karthikreddy/projects/oi based ai/venv/lib/python3.9/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.nseindia.com/option-chain
+Call log:
+  - navigating to "https://www.nseindia.com/option-chain", waiting until "domcontentloaded"
+
+2026-05-26 10:13:15 [WARNING ] downloader — Attempt 2 failed. Waiting 10s before retry…
+2026-05-26 10:13:25 [INFO    ] downloader — Download attempt 3 / 3
+2026-05-26 10:13:25 [INFO    ] downloader — Launching Chromium browser (headless=True)…
+2026-05-26 10:13:25 [INFO    ] downloader — Navigating to NSE Option Chain page…
+2026-05-26 10:13:25 [ERROR   ] downloader — Unexpected error in _download_once: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.nseindia.com/option-chain
+Call log:
+  - navigating to "https://www.nseindia.com/option-chain", waiting until "domcontentloaded"
+Traceback (most recent call last):
+  File "/Users/karthikreddy/projects/oi based ai/downloader.py", line 114, in _download_once
+    await page.goto(NSE_OPTION_CHAIN_URL, wait_until="domcontentloaded",
+  File "/Users/karthikreddy/projects/oi based ai/venv/lib/python3.9/site-packages/playwright/async_api/_generated.py", line 9045, in goto
+    await self._impl_obj.goto(
+  File "/Users/karthikreddy/projects/oi based ai/venv/lib/python3.9/site-packages/playwright/_impl/_page.py", line 552, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+  File "/Users/karthikreddy/projects/oi based ai/venv/lib/python3.9/site-packages/playwright/_impl/_frame.py", line 153, in goto
+    await self._channel.send(
+  File "/Users/karthikreddy/projects/oi based ai/venv/lib/python3.9/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+  File "/Users/karthikreddy/projects/oi based ai/venv/lib/python3.9/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.nseindia.com/option-chain
+Call log:
+  - navigating to "https://www.nseindia.com/option-chain", waiting until "domcontentloaded"
+
+2026-05-26 10:13:25 [WARNING ] downloader — Attempt 3 failed. Waiting 10s before retry…
+2026-05-26 10:13:25 [ERROR   ] downloader — ❌ All 3 download attempts failed.
+2026-05-26 10:13:25 [ERROR   ] bot — ❌ Download failed. Skipping this cycle.
+2026-05-26 10:13:25 [INFO    ] bot — --once flag set. Exiting.
+2026-05-26 10:13:46 [INFO    ] root — Logging initialised. Log file: /Users/karthikreddy/projects/oi based ai/logs/bot.log
+2026-05-26 10:13:46 [DEBUG   ] asyncio — Using selector: KqueueSelector
+2026-05-26 10:13:46 [INFO    ] bot — 🤖 NIFTY Option Chain CSV Bot starting…
+2026-05-26 10:13:46 [INFO    ] bot — Loop interval: 60s | Market hours: 09:15–15:30 IST
+2026-05-26 10:13:46 [INFO    ] bot — ============================================================
+2026-05-26 10:13:46 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:13:46 IST
+2026-05-26 10:13:46 [INFO    ] bot — ============================================================
+2026-05-26 10:13:46 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:13:46 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:13:46 [INFO    ] downloader — Launching Chromium browser (headless=True)…
+2026-05-26 10:13:46 [INFO    ] downloader — Navigating to NSE Option Chain page…
+2026-05-26 10:13:46 [ERROR   ] downloader — Unexpected error in _download_once: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.nseindia.com/option-chain
+Call log:
+  - navigating to "https://www.nseindia.com/option-chain", waiting until "domcontentloaded"
+Traceback (most recent call last):
+  File "/Users/karthikreddy/projects/oi based ai/downloader.py", line 114, in _download_once
+    await page.goto(NSE_OPTION_CHAIN_URL, wait_until="domcontentloaded",
+  File "/Users/karthikreddy/projects/oi based ai/venv/lib/python3.9/site-packages/playwright/async_api/_generated.py", line 9045, in goto
+    await self._impl_obj.goto(
+  File "/Users/karthikreddy/projects/oi based ai/venv/lib/python3.9/site-packages/playwright/_impl/_page.py", line 552, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+  File "/Users/karthikreddy/projects/oi based ai/venv/lib/python3.9/site-packages/playwright/_impl/_frame.py", line 153, in goto
+    await self._channel.send(
+  File "/Users/karthikreddy/projects/oi based ai/venv/lib/python3.9/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+  File "/Users/karthikreddy/projects/oi based ai/venv/lib/python3.9/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.nseindia.com/option-chain
+Call log:
+  - navigating to "https://www.nseindia.com/option-chain", waiting until "domcontentloaded"
+
+2026-05-26 10:13:46 [WARNING ] downloader — Attempt 1 failed. Waiting 10s before retry…
+2026-05-26 10:13:56 [INFO    ] downloader — Download attempt 2 / 3
+2026-05-26 10:13:56 [INFO    ] downloader — Launching Chromium browser (headless=True)…
+2026-05-26 10:13:56 [INFO    ] downloader — Navigating to NSE Option Chain page…
+2026-05-26 10:13:56 [ERROR   ] downloader — Unexpected error in _download_once: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.nseindia.com/option-chain
+Call log:
+  - navigating to "https://www.nseindia.com/option-chain", waiting until "domcontentloaded"
+Traceback (most recent call last):
+  File "/Users/karthikreddy/projects/oi based ai/downloader.py", line 114, in _download_once
+    await page.goto(NSE_OPTION_CHAIN_URL, wait_until="domcontentloaded",
+  File "/Users/karthikreddy/projects/oi based ai/venv/lib/python3.9/site-packages/playwright/async_api/_generated.py", line 9045, in goto
+    await self._impl_obj.goto(
+  File "/Users/karthikreddy/projects/oi based ai/venv/lib/python3.9/site-packages/playwright/_impl/_page.py", line 552, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+  File "/Users/karthikreddy/projects/oi based ai/venv/lib/python3.9/site-packages/playwright/_impl/_frame.py", line 153, in goto
+    await self._channel.send(
+  File "/Users/karthikreddy/projects/oi based ai/venv/lib/python3.9/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+  File "/Users/karthikreddy/projects/oi based ai/venv/lib/python3.9/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.nseindia.com/option-chain
+Call log:
+  - navigating to "https://www.nseindia.com/option-chain", waiting until "domcontentloaded"
+
+2026-05-26 10:13:56 [WARNING ] downloader — Attempt 2 failed. Waiting 10s before retry…
+2026-05-26 10:14:06 [INFO    ] downloader — Download attempt 3 / 3
+2026-05-26 10:14:06 [INFO    ] downloader — Launching Chromium browser (headless=True)…
+2026-05-26 10:14:07 [INFO    ] downloader — Navigating to NSE Option Chain page…
+2026-05-26 10:14:07 [ERROR   ] downloader — Unexpected error in _download_once: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.nseindia.com/option-chain
+Call log:
+  - navigating to "https://www.nseindia.com/option-chain", waiting until "domcontentloaded"
+Traceback (most recent call last):
+  File "/Users/karthikreddy/projects/oi based ai/downloader.py", line 114, in _download_once
+    await page.goto(NSE_OPTION_CHAIN_URL, wait_until="domcontentloaded",
+  File "/Users/karthikreddy/projects/oi based ai/venv/lib/python3.9/site-packages/playwright/async_api/_generated.py", line 9045, in goto
+    await self._impl_obj.goto(
+  File "/Users/karthikreddy/projects/oi based ai/venv/lib/python3.9/site-packages/playwright/_impl/_page.py", line 552, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+  File "/Users/karthikreddy/projects/oi based ai/venv/lib/python3.9/site-packages/playwright/_impl/_frame.py", line 153, in goto
+    await self._channel.send(
+  File "/Users/karthikreddy/projects/oi based ai/venv/lib/python3.9/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+  File "/Users/karthikreddy/projects/oi based ai/venv/lib/python3.9/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.nseindia.com/option-chain
+Call log:
+  - navigating to "https://www.nseindia.com/option-chain", waiting until "domcontentloaded"
+
+2026-05-26 10:14:07 [WARNING ] downloader — Attempt 3 failed. Waiting 10s before retry…
+2026-05-26 10:14:07 [ERROR   ] downloader — ❌ All 3 download attempts failed.
+2026-05-26 10:14:07 [ERROR   ] bot — ❌ Download failed. Skipping this cycle.
+2026-05-26 10:14:07 [INFO    ] bot — --once flag set. Exiting.
+2026-05-26 10:17:02 [INFO    ] root — Logging initialised. Log file: /Users/karthikreddy/projects/oi based ai/logs/bot.log
+2026-05-26 10:17:02 [INFO    ] bot — 🤖 NIFTY Option Chain CSV Bot starting…
+2026-05-26 10:17:02 [INFO    ] bot — Loop interval: 60s | Market hours: 09:15–15:30 IST
+2026-05-26 10:17:02 [INFO    ] bot — ============================================================
+2026-05-26 10:17:02 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:17:02 IST
+2026-05-26 10:17:02 [INFO    ] bot — ============================================================
+2026-05-26 10:17:02 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:17:02 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:17:02 [INFO    ] downloader — Launching Chromium browser (headless=True)...
+2026-05-26 10:17:02 [INFO    ] downloader — Phase 1: Warming up on NSE homepage to get session cookies...
+2026-05-26 10:17:20 [WARNING ] downloader — Homepage warm-up partial error (continuing): Page.goto: net::ERR_TIMED_OUT at https://www.nseindia.com/
+Call log:
+  - navigating to "https://www.nseindia.com/", waiting until "commit"
+
+2026-05-26 10:17:20 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 10:18:21 [ERROR   ] downloader — Timeout during download attempt: Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.nseindia.com/option-chain", waiting until "commit"
+
+2026-05-26 10:18:21 [WARNING ] downloader — Attempt 1 failed. Waiting 10s before retry...
+2026-05-26 10:18:31 [INFO    ] downloader — Download attempt 2 / 3
+2026-05-26 10:18:31 [INFO    ] downloader — Launching Chromium browser (headless=True)...
+2026-05-26 10:18:31 [INFO    ] downloader — Phase 1: Warming up on NSE homepage to get session cookies...
+2026-05-26 10:18:34 [INFO    ] root — Logging initialised. Log file: /Users/karthikreddy/projects/oi based ai/logs/bot.log
+2026-05-26 10:18:34 [DEBUG   ] asyncio — Using selector: KqueueSelector
+2026-05-26 10:18:34 [INFO    ] bot — 🤖 NIFTY Option Chain CSV Bot starting…
+2026-05-26 10:18:34 [INFO    ] bot — Loop interval: 60s | Market hours: 09:15–15:30 IST
+2026-05-26 10:18:34 [INFO    ] bot — ============================================================
+2026-05-26 10:18:34 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:18:34 IST
+2026-05-26 10:18:34 [INFO    ] bot — ============================================================
+2026-05-26 10:18:34 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:18:35 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:18:35 [INFO    ] downloader — Launching Chromium browser (headless=True)...
+2026-05-26 10:18:35 [INFO    ] downloader — Phase 1: Warming up on NSE homepage to get session cookies...
+2026-05-26 10:19:31 [WARNING ] downloader — Homepage warm-up partial error (continuing): Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.nseindia.com/", waiting until "commit"
+
+2026-05-26 10:19:31 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 10:20:31 [ERROR   ] downloader — Timeout during download attempt: Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.nseindia.com/option-chain", waiting until "commit"
+
+2026-05-26 10:20:31 [WARNING ] downloader — Attempt 2 failed. Waiting 10s before retry...
+2026-05-26 10:20:41 [INFO    ] downloader — Download attempt 3 / 3
+2026-05-26 10:20:41 [INFO    ] downloader — Launching Chromium browser (headless=True)...
+2026-05-26 10:20:41 [INFO    ] downloader — Phase 1: Warming up on NSE homepage to get session cookies...
+2026-05-26 10:20:55 [INFO    ] root — Logging initialised. Log file: /Users/karthikreddy/projects/oi based ai/logs/bot.log
+2026-05-26 10:20:55 [INFO    ] bot — 🤖 NIFTY Option Chain CSV Bot starting…
+2026-05-26 10:20:55 [INFO    ] bot — Loop interval: 60s | Market hours: 09:15–15:30 IST
+2026-05-26 10:20:55 [INFO    ] bot — ============================================================
+2026-05-26 10:20:55 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:20:55 IST
+2026-05-26 10:20:55 [INFO    ] bot — ============================================================
+2026-05-26 10:20:55 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:20:55 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:20:55 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 10:20:55 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 10:20:56 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...
+2026-05-26 10:21:03 [INFO    ] downloader — Homepage loaded. Title: NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp; Updates, Quotes- Nseindia.com
+2026-05-26 10:21:03 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 10:21:09 [INFO    ] downloader — Option chain page ready. Title: Option Chain - NSE India
+2026-05-26 10:21:09 [INFO    ] downloader — Clicked NIFTY tab/button
+2026-05-26 10:21:09 [WARNING ] downloader — Expiry dropdown not found -- using page default.
+2026-05-26 10:21:09 [INFO    ] downloader — Looking for Download CSV button...
+2026-05-26 10:21:09 [INFO    ] downloader — Clicked download button: a:has-text('Download (.csv)')
+2026-05-26 10:21:09 [INFO    ] downloader — CSV saved: /Users/karthikreddy/projects/oi based ai/downloads/nifty_option_chain_20260526_102109.csv (20063 bytes)
+2026-05-26 10:21:09 [INFO    ] downloader — Download successful: /Users/karthikreddy/projects/oi based ai/downloads/nifty_option_chain_20260526_102109.csv
+2026-05-26 10:21:09 [INFO    ] bot — ✅ CSV ready: /Users/karthikreddy/projects/oi based ai/downloads/nifty_option_chain_20260526_102109.csv
+2026-05-26 10:21:09 [INFO    ] bot — Step 2/4 — Analysing OI data…
+2026-05-26 10:21:09 [INFO    ] analyzer — Loaded 144 strikes from CSV.
+2026-05-26 10:21:09 [WARNING ] analyzer — Spot price not found in CSV; using middle strike: 23700.0
+2026-05-26 10:21:09 [INFO    ] analyzer — Spot=23700.00  ATM strike=23700
+2026-05-26 10:21:09 [INFO    ] analyzer — Analysis done | PCR=1.27 | ATM=23700 | Resistance=24100 | Support=24000
+2026-05-26 10:21:09 [INFO    ] bot — ✅ Analysis done | Spot=23700 | ATM=23700 | PCR=1.27 | Resistance=24100 | Support=24000
+2026-05-26 10:21:09 [INFO    ] bot — Step 3/4 — Generating signal…
+2026-05-26 10:21:09 [INFO    ] signals — Signal generated: STRONG BULLISH (score=4)
+2026-05-26 10:21:09 [INFO    ] bot — ✅ Signal: 🚀 STRONG BULLISH | PCR: 1.27 | ATM: 23700 | Spot: 23700 | Resistance: 24100 | Support: 24000 | Score: +4
+2026-05-26 10:21:09 [INFO    ] bot —   🟢 Strong bullish sentiment — Overall PCR is very high (1.27 > 1.20). Huge put writing across chain.
+2026-05-26 10:21:09 [INFO    ] bot —   🟢 ATM-window PCR bullish (2.13) — Put writing concentrated near ATM (23700).
+2026-05-26 10:21:09 [INFO    ] bot —   ⚠️  Spot (23700) is very close to support (24000). Strong put wall below. Downside likely limited short-term.
+2026-05-26 10:21:09 [WARNING ] bot —   ALERTS:
+2026-05-26 10:21:09 [WARNING ] bot —     SUPPORT ALERT: Spot 23700 ≈ Max Put OI at 24000
+2026-05-26 10:21:09 [INFO    ] bot — Step 4/4 — Saving logs & sending alerts…
+2026-05-26 10:21:09 [INFO    ] bot — ✅ Cycle complete.
+
+2026-05-26 10:21:09 [INFO    ] bot — --once flag set. Exiting.
+2026-05-26 10:21:41 [WARNING ] downloader — Homepage warm-up partial error (continuing): Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.nseindia.com/", waiting until "commit"
+
+2026-05-26 10:21:41 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 10:22:41 [ERROR   ] downloader — Timeout during download attempt: Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.nseindia.com/option-chain", waiting until "commit"
+
+2026-05-26 10:22:41 [WARNING ] downloader — Attempt 3 failed. Waiting 10s before retry...
+2026-05-26 10:22:41 [ERROR   ] downloader — All 3 download attempts failed.
+2026-05-26 10:22:41 [ERROR   ] bot — ❌ Download failed. Skipping this cycle.
+2026-05-26 10:22:41 [INFO    ] bot — --once flag set. Exiting.
+2026-05-26 10:24:12 [INFO    ] root — Logging initialised. Log file: /Users/karthikreddy/projects/oi based ai/logs/bot.log
+2026-05-26 10:24:12 [INFO    ] bot — 🤖 NIFTY Option Chain CSV Bot starting…
+2026-05-26 10:24:12 [INFO    ] bot — Loop interval: 60s | Market hours: 09:15–15:30 IST
+2026-05-26 10:24:12 [INFO    ] bot — ============================================================
+2026-05-26 10:24:12 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:24:12 IST
+2026-05-26 10:24:12 [INFO    ] bot — ============================================================
+2026-05-26 10:24:12 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:24:12 [INFO    ] downloader — Cleared 1 old CSV file(s) from downloads/
+2026-05-26 10:24:12 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:24:12 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 10:24:12 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 10:24:13 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...
+2026-05-26 10:24:20 [INFO    ] downloader — Homepage loaded. Title: NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp; Updates, Quotes- Nseindia.com
+2026-05-26 10:24:20 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 10:24:26 [INFO    ] downloader — Option chain page ready. Title: Option Chain - NSE India
+2026-05-26 10:24:26 [INFO    ] downloader — Clicked NIFTY tab/button
+2026-05-26 10:24:26 [WARNING ] downloader — Expiry dropdown not found -- using page default.
+2026-05-26 10:24:26 [INFO    ] downloader — Looking for Download CSV button...
+2026-05-26 10:24:26 [INFO    ] downloader — Clicked download button: a:has-text('Download (.csv)')
+2026-05-26 10:24:26 [INFO    ] downloader — CSV saved: /Users/karthikreddy/projects/oi based ai/downloads/nifty_option_chain_20260526_102426.csv (20155 bytes)
+2026-05-26 10:24:26 [INFO    ] downloader — Download successful: /Users/karthikreddy/projects/oi based ai/downloads/nifty_option_chain_20260526_102426.csv
+2026-05-26 10:24:26 [INFO    ] bot — ✅ CSV ready: /Users/karthikreddy/projects/oi based ai/downloads/nifty_option_chain_20260526_102426.csv
+2026-05-26 10:24:26 [INFO    ] bot — Step 2/4 — Analysing OI data…
+2026-05-26 10:24:26 [INFO    ] analyzer — Loaded 144 strikes from CSV.
+2026-05-26 10:24:26 [WARNING ] analyzer — Spot price not found in CSV; using middle strike: 23700.0
+2026-05-26 10:24:26 [INFO    ] analyzer — Spot=23700.00  ATM strike=23700
+2026-05-26 10:24:26 [INFO    ] analyzer — Analysis done | PCR=1.27 | ATM=23700 | Resistance=24100 | Support=24000
+2026-05-26 10:24:26 [INFO    ] bot — ✅ Analysis done | Spot=23700 | ATM=23700 | PCR=1.27 | Resistance=24100 | Support=24000
+2026-05-26 10:24:26 [INFO    ] bot — Step 3/4 — Generating signal…
+2026-05-26 10:24:26 [INFO    ] signals — Signal generated: STRONG BULLISH (score=4)
+2026-05-26 10:24:26 [INFO    ] bot — ✅ Signal: 🚀 STRONG BULLISH | PCR: 1.27 | ATM: 23700 | Spot: 23700 | Resistance: 24100 | Support: 24000 | Score: +4
+2026-05-26 10:24:26 [INFO    ] bot —   🟢 Strong bullish sentiment — Overall PCR is very high (1.27 > 1.20). Huge put writing across chain.
+2026-05-26 10:24:26 [INFO    ] bot —   🟢 ATM-window PCR bullish (2.13) — Put writing concentrated near ATM (23700).
+2026-05-26 10:24:26 [INFO    ] bot —   ⚠️  Spot (23700) is very close to support (24000). Strong put wall below. Downside likely limited short-term.
+2026-05-26 10:24:26 [WARNING ] bot —   ALERTS:
+2026-05-26 10:24:26 [WARNING ] bot —     SUPPORT ALERT: Spot 23700 ≈ Max Put OI at 24000
+2026-05-26 10:24:26 [INFO    ] bot — Step 4/4 — Saving logs & sending alerts…
+2026-05-26 10:24:26 [INFO    ] bot — ✅ Cycle complete.
+
+2026-05-26 10:24:26 [INFO    ] bot — Next cycle in 46s…
+2026-05-26 10:24:36 [INFO    ] root — Logging initialised. Log file: /Users/karthikreddy/projects/oi based ai/logs/bot.log
+2026-05-26 10:24:36 [INFO    ] bot — 🤖 NIFTY Option Chain CSV Bot starting…
+2026-05-26 10:24:36 [INFO    ] bot — Loop interval: 60s | Market hours: 09:15–15:30 IST
+2026-05-26 10:24:36 [INFO    ] bot — ============================================================
+2026-05-26 10:24:36 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:24:36 IST
+2026-05-26 10:24:36 [INFO    ] bot — ============================================================
+2026-05-26 10:24:36 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:24:36 [INFO    ] downloader — Cleared 1 old CSV file(s) from downloads/
+2026-05-26 10:24:36 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:24:36 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 10:24:36 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 10:24:37 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...
+2026-05-26 10:24:44 [INFO    ] downloader — Homepage loaded. Title: NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp; Updates, Quotes- Nseindia.com
+2026-05-26 10:24:44 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 10:24:49 [INFO    ] downloader — Option chain page ready. Title: Option Chain - NSE India
+2026-05-26 10:24:49 [INFO    ] downloader — Clicked NIFTY tab/button
+2026-05-26 10:24:49 [WARNING ] downloader — Expiry dropdown not found -- using page default.
+2026-05-26 10:24:49 [INFO    ] downloader — Looking for Download CSV button...
+2026-05-26 10:24:49 [INFO    ] downloader — Clicked download button: a:has-text('Download (.csv)')
+2026-05-26 10:24:49 [INFO    ] downloader — CSV saved: /Users/karthikreddy/projects/oi based ai/downloads/nifty_option_chain_20260526_102449.csv (20156 bytes)
+2026-05-26 10:24:50 [INFO    ] downloader — Download successful: /Users/karthikreddy/projects/oi based ai/downloads/nifty_option_chain_20260526_102449.csv
+2026-05-26 10:24:50 [INFO    ] bot — ✅ CSV ready: /Users/karthikreddy/projects/oi based ai/downloads/nifty_option_chain_20260526_102449.csv
+2026-05-26 10:24:50 [INFO    ] bot — Step 2/4 — Analysing OI data…
+2026-05-26 10:24:50 [INFO    ] analyzer — Loaded 144 strikes from CSV.
+2026-05-26 10:24:50 [WARNING ] analyzer — Spot price not found in CSV; using middle strike: 23700.0
+2026-05-26 10:24:50 [INFO    ] analyzer — Spot=23700.00  ATM strike=23700
+2026-05-26 10:24:50 [INFO    ] analyzer — Analysis done | PCR=1.27 | ATM=23700 | Resistance=24100 | Support=24000
+2026-05-26 10:24:50 [INFO    ] bot — ✅ Analysis done | Spot=23700 | ATM=23700 | PCR=1.27 | Resistance=24100 | Support=24000
+2026-05-26 10:24:50 [INFO    ] bot — Step 3/4 — Generating signal…
+2026-05-26 10:24:50 [INFO    ] signals — Signal generated: STRONG BULLISH (score=4)
+2026-05-26 10:24:50 [INFO    ] bot — ✅ Signal: 🚀 STRONG BULLISH | PCR: 1.27 | ATM: 23700 | Spot: 23700 | Resistance: 24100 | Support: 24000 | Score: +4
+2026-05-26 10:24:50 [INFO    ] bot —   🟢 Strong bullish sentiment — Overall PCR is very high (1.27 > 1.20). Huge put writing across chain.
+2026-05-26 10:24:50 [INFO    ] bot —   🟢 ATM-window PCR bullish (2.13) — Put writing concentrated near ATM (23700).
+2026-05-26 10:24:50 [INFO    ] bot —   ⚠️  Spot (23700) is very close to support (24000). Strong put wall below. Downside likely limited short-term.
+2026-05-26 10:24:50 [WARNING ] bot —   ALERTS:
+2026-05-26 10:24:50 [WARNING ] bot —     SUPPORT ALERT: Spot 23700 ≈ Max Put OI at 24000
+2026-05-26 10:24:50 [INFO    ] bot — Step 4/4 — Saving logs & sending alerts…
+2026-05-26 10:24:50 [INFO    ] bot — ✅ Cycle complete.
+
+2026-05-26 10:24:50 [INFO    ] bot — Next cycle in 47s…
+2026-05-26 10:25:36 [INFO    ] bot — ============================================================
+2026-05-26 10:25:36 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:25:36 IST
+2026-05-26 10:25:36 [INFO    ] bot — ============================================================
+2026-05-26 10:25:36 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:25:36 [INFO    ] downloader — Cleared 1 old CSV file(s) from downloads/
+2026-05-26 10:25:36 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:25:36 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 10:25:36 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 10:25:37 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...
+2026-05-26 10:25:44 [INFO    ] downloader — Homepage loaded. Title: NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp; Updates, Quotes- Nseindia.com
+2026-05-26 10:25:44 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 10:25:50 [INFO    ] downloader — Option chain page ready. Title: Option Chain - NSE India
+2026-05-26 10:25:50 [INFO    ] downloader — Clicked NIFTY tab/button
+2026-05-26 10:25:50 [WARNING ] downloader — Expiry dropdown not found -- using page default.
+2026-05-26 10:25:50 [INFO    ] downloader — Looking for Download CSV button...
+2026-05-26 10:25:50 [INFO    ] downloader — Clicked download button: a:has-text('Download (.csv)')
+2026-05-26 10:25:50 [INFO    ] downloader — CSV saved: /Users/karthikreddy/projects/oi based ai/downloads/nifty_option_chain_20260526_102550.csv (20152 bytes)
+2026-05-26 10:25:50 [INFO    ] downloader — Download successful: /Users/karthikreddy/projects/oi based ai/downloads/nifty_option_chain_20260526_102550.csv
+2026-05-26 10:25:50 [INFO    ] bot — ✅ CSV ready: /Users/karthikreddy/projects/oi based ai/downloads/nifty_option_chain_20260526_102550.csv
+2026-05-26 10:25:50 [INFO    ] bot — Step 2/4 — Analysing OI data…
+2026-05-26 10:25:50 [INFO    ] analyzer — Loaded 144 strikes from CSV.
+2026-05-26 10:25:50 [WARNING ] analyzer — Spot price not found in CSV; using middle strike: 23700.0
+2026-05-26 10:25:50 [INFO    ] analyzer — Spot=23700.00  ATM strike=23700
+2026-05-26 10:25:50 [INFO    ] analyzer — Analysis done | PCR=1.28 | ATM=23700 | Resistance=24100 | Support=24000
+2026-05-26 10:25:50 [INFO    ] bot — ✅ Analysis done | Spot=23700 | ATM=23700 | PCR=1.28 | Resistance=24100 | Support=24000
+2026-05-26 10:25:50 [INFO    ] bot — Step 3/4 — Generating signal…
+2026-05-26 10:25:50 [INFO    ] signals — Signal generated: STRONG BULLISH (score=4)
+2026-05-26 10:25:50 [INFO    ] bot — ✅ Signal: 🚀 STRONG BULLISH | PCR: 1.28 | ATM: 23700 | Spot: 23700 | Resistance: 24100 | Support: 24000 | Score: +4
+2026-05-26 10:25:50 [INFO    ] bot —   🟢 Strong bullish sentiment — Overall PCR is very high (1.28 > 1.20). Huge put writing across chain.
+2026-05-26 10:25:50 [INFO    ] bot —   🟢 ATM-window PCR bullish (2.15) — Put writing concentrated near ATM (23700).
+2026-05-26 10:25:50 [INFO    ] bot —   ⚠️  Spot (23700) is very close to support (24000). Strong put wall below. Downside likely limited short-term.
+2026-05-26 10:25:50 [WARNING ] bot —   ALERTS:
+2026-05-26 10:25:50 [WARNING ] bot —     SUPPORT ALERT: Spot 23700 ≈ Max Put OI at 24000
+2026-05-26 10:25:50 [INFO    ] bot — Step 4/4 — Saving logs & sending alerts…
+2026-05-26 10:25:50 [INFO    ] bot — ✅ Cycle complete.
+
+2026-05-26 10:25:50 [INFO    ] bot — Next cycle in 46s…
+2026-05-26 10:26:36 [INFO    ] bot — ============================================================
+2026-05-26 10:26:36 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:26:36 IST
+2026-05-26 10:26:36 [INFO    ] bot — ============================================================
+2026-05-26 10:26:36 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:26:36 [INFO    ] downloader — Cleared 1 old CSV file(s) from downloads/
+2026-05-26 10:26:36 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:26:36 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 10:26:36 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 10:26:37 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...
+2026-05-26 10:26:44 [INFO    ] downloader — Homepage loaded. Title: NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp; Updates, Quotes- Nseindia.com
+2026-05-26 10:26:44 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 10:26:50 [INFO    ] downloader — Option chain page ready. Title: Option Chain - NSE India
+2026-05-26 10:26:50 [INFO    ] downloader — Clicked NIFTY tab/button
+2026-05-26 10:26:50 [WARNING ] downloader — Expiry dropdown not found -- using page default.
+2026-05-26 10:26:50 [INFO    ] downloader — Looking for Download CSV button...
+2026-05-26 10:26:50 [INFO    ] downloader — Clicked download button: a:has-text('Download (.csv)')
+2026-05-26 10:26:50 [INFO    ] downloader — CSV saved: /Users/karthikreddy/projects/oi based ai/downloads/nifty_option_chain_20260526_102650.csv (20162 bytes)
+2026-05-26 10:26:50 [INFO    ] downloader — Download successful: /Users/karthikreddy/projects/oi based ai/downloads/nifty_option_chain_20260526_102650.csv
+2026-05-26 10:26:50 [INFO    ] bot — ✅ CSV ready: /Users/karthikreddy/projects/oi based ai/downloads/nifty_option_chain_20260526_102650.csv
+2026-05-26 10:26:50 [INFO    ] bot — Step 2/4 — Analysing OI data…
+2026-05-26 10:26:50 [INFO    ] analyzer — Loaded 144 strikes from CSV.
+2026-05-26 10:26:50 [WARNING ] analyzer — Spot price not found in CSV; using middle strike: 23700.0
+2026-05-26 10:26:50 [INFO    ] analyzer — Spot=23700.00  ATM strike=23700
+2026-05-26 10:26:50 [INFO    ] analyzer — Analysis done | PCR=1.28 | ATM=23700 | Resistance=24100 | Support=24000
+2026-05-26 10:26:50 [INFO    ] bot — ✅ Analysis done | Spot=23700 | ATM=23700 | PCR=1.28 | Resistance=24100 | Support=24000
+2026-05-26 10:26:50 [INFO    ] bot — Step 3/4 — Generating signal…
+2026-05-26 10:26:50 [INFO    ] signals — Signal generated: STRONG BULLISH (score=4)
+2026-05-26 10:26:50 [INFO    ] bot — ✅ Signal: 🚀 STRONG BULLISH | PCR: 1.28 | ATM: 23700 | Spot: 23700 | Resistance: 24100 | Support: 24000 | Score: +4
+2026-05-26 10:26:50 [INFO    ] bot —   🟢 Strong bullish sentiment — Overall PCR is very high (1.28 > 1.20). Huge put writing across chain.
+2026-05-26 10:26:50 [INFO    ] bot —   🟢 ATM-window PCR bullish (2.16) — Put writing concentrated near ATM (23700).
+2026-05-26 10:26:50 [INFO    ] bot —   ⚠️  Spot (23700) is very close to support (24000). Strong put wall below. Downside likely limited short-term.
+2026-05-26 10:26:50 [WARNING ] bot —   ALERTS:
+2026-05-26 10:26:50 [WARNING ] bot —     SUPPORT ALERT: Spot 23700 ≈ Max Put OI at 24000
+2026-05-26 10:26:50 [INFO    ] bot — Step 4/4 — Saving logs & sending alerts…
+2026-05-26 10:26:50 [INFO    ] bot — ✅ Cycle complete.
+
+2026-05-26 10:26:50 [INFO    ] bot — Next cycle in 46s…
+2026-05-26 10:27:36 [INFO    ] bot — ============================================================
+2026-05-26 10:27:36 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:27:36 IST
+2026-05-26 10:27:36 [INFO    ] bot — ============================================================
+2026-05-26 10:27:36 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:27:36 [INFO    ] downloader — Cleared 1 old CSV file(s) from downloads/
+2026-05-26 10:27:36 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:27:36 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 10:27:36 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 10:27:37 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...
+2026-05-26 10:27:44 [INFO    ] downloader — Homepage loaded. Title: NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp; Updates, Quotes- Nseindia.com
+2026-05-26 10:27:44 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 10:27:50 [INFO    ] downloader — Option chain page ready. Title: Option Chain - NSE India
+2026-05-26 10:27:50 [INFO    ] downloader — Clicked NIFTY tab/button
+2026-05-26 10:27:50 [WARNING ] downloader — Expiry dropdown not found -- using page default.
+2026-05-26 10:27:50 [INFO    ] downloader — Looking for Download CSV button...
+2026-05-26 10:27:50 [INFO    ] downloader — Clicked download button: a:has-text('Download (.csv)')
+2026-05-26 10:27:50 [INFO    ] downloader — CSV saved: /Users/karthikreddy/projects/oi based ai/downloads/nifty_option_chain_20260526_102750.csv (20157 bytes)
+2026-05-26 10:27:50 [INFO    ] downloader — Download successful: /Users/karthikreddy/projects/oi based ai/downloads/nifty_option_chain_20260526_102750.csv
+2026-05-26 10:27:50 [INFO    ] bot — ✅ CSV ready: /Users/karthikreddy/projects/oi based ai/downloads/nifty_option_chain_20260526_102750.csv
+2026-05-26 10:27:50 [INFO    ] bot — Step 2/4 — Analysing OI data…
+2026-05-26 10:27:50 [INFO    ] analyzer — Loaded 144 strikes from CSV.
+2026-05-26 10:27:50 [WARNING ] analyzer — Spot price not found in CSV; using middle strike: 23700.0
+2026-05-26 10:27:50 [INFO    ] analyzer — Spot=23700.00  ATM strike=23700
+2026-05-26 10:27:50 [INFO    ] analyzer — Analysis done | PCR=1.30 | ATM=23700 | Resistance=24100 | Support=24000
+2026-05-26 10:27:50 [INFO    ] bot — ✅ Analysis done | Spot=23700 | ATM=23700 | PCR=1.30 | Resistance=24100 | Support=24000
+2026-05-26 10:27:50 [INFO    ] bot — Step 3/4 — Generating signal…
+2026-05-26 10:27:50 [INFO    ] signals — Signal generated: STRONG BULLISH (score=4)
+2026-05-26 10:27:50 [INFO    ] bot — ✅ Signal: 🚀 STRONG BULLISH | PCR: 1.30 | ATM: 23700 | Spot: 23700 | Resistance: 24100 | Support: 24000 | Score: +4
+2026-05-26 10:27:50 [INFO    ] bot —   🟢 Strong bullish sentiment — Overall PCR is very high (1.30 > 1.20). Huge put writing across chain.
+2026-05-26 10:27:50 [INFO    ] bot —   🟢 ATM-window PCR bullish (2.21) — Put writing concentrated near ATM (23700).
+2026-05-26 10:27:50 [INFO    ] bot —   ⚠️  Spot (23700) is very close to support (24000). Strong put wall below. Downside likely limited short-term.
+2026-05-26 10:27:50 [WARNING ] bot —   ALERTS:
+2026-05-26 10:27:50 [WARNING ] bot —     SUPPORT ALERT: Spot 23700 ≈ Max Put OI at 24000
+2026-05-26 10:27:50 [INFO    ] bot — Step 4/4 — Saving logs & sending alerts…
+2026-05-26 10:27:50 [INFO    ] bot — ✅ Cycle complete.
+
+2026-05-26 10:27:50 [INFO    ] bot — Next cycle in 46s…
+2026-05-26 10:33:23 [INFO    ] root — Logging initialised. Log file: /Users/karthikreddy/projects/oi based ai/logs/bot.log
+2026-05-26 10:33:23 [INFO    ] bot — 🤖 NIFTY Option Chain CSV Bot starting…
+2026-05-26 10:33:23 [INFO    ] bot — Loop interval: 60s | Market hours: 09:15–15:30 IST
+2026-05-26 10:33:23 [INFO    ] bot — ============================================================
+2026-05-26 10:33:23 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:33:23 IST
+2026-05-26 10:33:23 [INFO    ] bot — ============================================================
+2026-05-26 10:33:23 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:33:23 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:33:23 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 10:33:23 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 10:33:24 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...
+2026-05-26 10:33:31 [INFO    ] downloader — Homepage loaded. Title: NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp; Updates, Quotes- Nseindia.com
+2026-05-26 10:33:31 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 10:33:37 [INFO    ] downloader — Option chain page ready. Title: Option Chain - NSE India
+2026-05-26 10:33:37 [INFO    ] downloader — Clicked NIFTY tab/button
+2026-05-26 10:33:37 [WARNING ] downloader — Expiry dropdown not found -- using page default.
+2026-05-26 10:33:37 [INFO    ] downloader — Looking for Download CSV button...
+2026-05-26 10:33:37 [INFO    ] downloader — Clicked download button: a:has-text('Download (.csv)')
+2026-05-26 10:33:37 [INFO    ] downloader — Archive saved: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_103337.csv (20144 bytes)
+2026-05-26 10:33:37 [INFO    ] downloader — latest.csv updated: /Users/karthikreddy/projects/oi based ai/downloads/latest.csv
+2026-05-26 10:33:37 [INFO    ] downloader — Download successful: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_103337.csv
+2026-05-26 10:33:37 [INFO    ] bot — ✅ CSV ready: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_103337.csv
+2026-05-26 10:33:37 [INFO    ] bot — Step 2/4 — Analysing OI data…
+2026-05-26 10:33:37 [INFO    ] analyzer — Loaded 144 strikes from CSV.
+2026-05-26 10:33:37 [WARNING ] analyzer — Spot price not found in CSV; using middle strike: 23700.0
+2026-05-26 10:33:37 [INFO    ] analyzer — Spot=23700.00  ATM strike=23700
+2026-05-26 10:33:37 [INFO    ] analyzer — Analysis done | PCR=1.33 | ATM=23700 | Resistance=24100 | Support=24000
+2026-05-26 10:33:37 [INFO    ] bot — ✅ Analysis done | Spot=23700 | ATM=23700 | PCR=1.33 | Resistance=24100 | Support=24000
+2026-05-26 10:33:37 [INFO    ] bot — Step 3/4 — Generating signal…
+2026-05-26 10:33:37 [INFO    ] signals — Signal generated: STRONG BULLISH (score=4)
+2026-05-26 10:33:37 [INFO    ] bot — ✅ Signal: 🚀 STRONG BULLISH | PCR: 1.33 | ATM: 23700 | Spot: 23700 | Resistance: 24100 | Support: 24000 | Score: +4
+2026-05-26 10:33:37 [INFO    ] bot —   🟢 Strong bullish sentiment — Overall PCR is very high (1.33 > 1.20). Huge put writing across chain.
+2026-05-26 10:33:37 [INFO    ] bot —   🟢 ATM-window PCR bullish (2.29) — Put writing concentrated near ATM (23700).
+2026-05-26 10:33:37 [INFO    ] bot —   ⚠️  Spot (23700) is very close to support (24000). Strong put wall below. Downside likely limited short-term.
+2026-05-26 10:33:37 [WARNING ] bot —   ALERTS:
+2026-05-26 10:33:37 [WARNING ] bot —     SUPPORT ALERT: Spot 23700 ≈ Max Put OI at 24000
+2026-05-26 10:33:37 [INFO    ] bot — Step 4/4 — Saving logs & sending alerts…
+2026-05-26 10:33:37 [INFO    ] bot — ✅ Cycle complete.
+
+2026-05-26 10:33:37 [INFO    ] bot — --once flag set. Exiting.
+2026-05-26 10:36:25 [INFO    ] root — Logging initialised. Log file: /Users/karthikreddy/projects/oi based ai/logs/bot.log
+2026-05-26 10:36:25 [INFO    ] bot — 🤖 NIFTY Option Chain CSV Bot starting…
+2026-05-26 10:36:25 [INFO    ] bot — Loop interval: 60s | Market hours: 09:15–15:30 IST
+2026-05-26 10:36:25 [INFO    ] bot — ============================================================
+2026-05-26 10:36:25 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:36:25 IST
+2026-05-26 10:36:25 [INFO    ] bot — ============================================================
+2026-05-26 10:36:25 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:36:25 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:36:25 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 10:36:25 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 10:36:26 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...
+2026-05-26 10:36:33 [INFO    ] downloader — Homepage loaded. Title: NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp; Updates, Quotes- Nseindia.com
+2026-05-26 10:36:33 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 10:36:38 [INFO    ] downloader — Option chain page ready. Title: Option Chain - NSE India
+2026-05-26 10:36:38 [INFO    ] downloader — Clicked NIFTY tab/button
+2026-05-26 10:36:38 [WARNING ] downloader — Expiry dropdown not found -- using page default.
+2026-05-26 10:36:38 [INFO    ] downloader — Looking for Download CSV button...
+2026-05-26 10:36:38 [INFO    ] downloader — Clicked download button: a:has-text('Download (.csv)')
+2026-05-26 10:36:38 [INFO    ] downloader — Archive saved: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_103638.csv (20251 bytes)
+2026-05-26 10:36:38 [INFO    ] downloader — latest.csv updated: /Users/karthikreddy/projects/oi based ai/downloads/latest.csv
+2026-05-26 10:36:38 [INFO    ] downloader — Download successful: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_103638.csv
+2026-05-26 10:36:38 [INFO    ] bot — ✅ CSV ready: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_103638.csv
+2026-05-26 10:36:38 [INFO    ] bot — Step 2/4 — Analysing OI data…
+2026-05-26 10:36:38 [INFO    ] analyzer — Loaded 144 strikes from CSV.
+2026-05-26 10:36:38 [WARNING ] analyzer — Spot price not found in CSV; using middle strike: 23700.0
+2026-05-26 10:36:38 [INFO    ] analyzer — Spot=23700.00  ATM strike=23700
+2026-05-26 10:36:38 [INFO    ] analyzer — Analysis done | PCR=1.37 | ATM=23700 | Resistance=24100 | Support=24000
+2026-05-26 10:36:38 [INFO    ] bot — ✅ Analysis done | Spot=23700 | ATM=23700 | PCR=1.37 | Resistance=24100 | Support=24000
+2026-05-26 10:36:38 [INFO    ] bot — Step 3/4 — Generating signal…
+2026-05-26 10:36:38 [INFO    ] signals — Signal generated: STRONG BULLISH (score=4)
+2026-05-26 10:36:38 [INFO    ] bot — ✅ Signal: 🚀 STRONG BULLISH | PCR: 1.37 | ATM: 23700 | Spot: 23700 | Resistance: 24100 | Support: 24000 | Score: +4
+2026-05-26 10:36:38 [INFO    ] bot —   🟢 Strong bullish sentiment — Overall PCR is very high (1.37 > 1.20). Huge put writing across chain.
+2026-05-26 10:36:38 [INFO    ] bot —   🟢 ATM-window PCR bullish (2.38) — Put writing concentrated near ATM (23700).
+2026-05-26 10:36:38 [INFO    ] bot —   ⚠️  Spot (23700) is very close to support (24000). Strong put wall below. Downside likely limited short-term.
+2026-05-26 10:36:38 [WARNING ] bot —   ALERTS:
+2026-05-26 10:36:38 [WARNING ] bot —     SUPPORT ALERT: Spot 23700 ≈ Max Put OI at 24000
+2026-05-26 10:36:38 [INFO    ] bot — Step 4/4 — Saving logs & sending alerts…
+2026-05-26 10:36:38 [INFO    ] bot — ✅ Cycle complete.
+
+2026-05-26 10:36:38 [INFO    ] bot — Next cycle in 46s…
+2026-05-26 10:37:25 [INFO    ] bot — ============================================================
+2026-05-26 10:37:25 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:37:25 IST
+2026-05-26 10:37:25 [INFO    ] bot — ============================================================
+2026-05-26 10:37:25 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:37:25 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:37:25 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 10:37:25 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 10:37:25 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...
+2026-05-26 10:37:32 [INFO    ] downloader — Homepage loaded. Title: NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp; Updates, Quotes- Nseindia.com
+2026-05-26 10:37:32 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 10:37:38 [INFO    ] downloader — Option chain page ready. Title: Option Chain - NSE India
+2026-05-26 10:37:38 [INFO    ] downloader — Clicked NIFTY tab/button
+2026-05-26 10:37:38 [WARNING ] downloader — Expiry dropdown not found -- using page default.
+2026-05-26 10:37:38 [INFO    ] downloader — Looking for Download CSV button...
+2026-05-26 10:37:38 [INFO    ] downloader — Clicked download button: a:has-text('Download (.csv)')
+2026-05-26 10:37:38 [INFO    ] downloader — Archive saved: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_103738.csv (20239 bytes)
+2026-05-26 10:37:38 [INFO    ] downloader — latest.csv updated: /Users/karthikreddy/projects/oi based ai/downloads/latest.csv
+2026-05-26 10:37:38 [INFO    ] downloader — Download successful: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_103738.csv
+2026-05-26 10:37:38 [INFO    ] bot — ✅ CSV ready: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_103738.csv
+2026-05-26 10:37:38 [INFO    ] bot — Step 2/4 — Analysing OI data…
+2026-05-26 10:37:38 [INFO    ] analyzer — Loaded 144 strikes from CSV.
+2026-05-26 10:37:38 [WARNING ] analyzer — Spot price not found in CSV; using middle strike: 23700.0
+2026-05-26 10:37:38 [INFO    ] analyzer — Spot=23700.00  ATM strike=23700
+2026-05-26 10:37:38 [INFO    ] analyzer — Analysis done | PCR=1.39 | ATM=23700 | Resistance=24100 | Support=24000
+2026-05-26 10:37:38 [INFO    ] bot — ✅ Analysis done | Spot=23700 | ATM=23700 | PCR=1.39 | Resistance=24100 | Support=24000
+2026-05-26 10:37:38 [INFO    ] bot — Step 3/4 — Generating signal…
+2026-05-26 10:37:38 [INFO    ] signals — Signal generated: STRONG BULLISH (score=4)
+2026-05-26 10:37:38 [INFO    ] bot — ✅ Signal: 🚀 STRONG BULLISH | PCR: 1.39 | ATM: 23700 | Spot: 23700 | Resistance: 24100 | Support: 24000 | Score: +4
+2026-05-26 10:37:38 [INFO    ] bot —   🟢 Strong bullish sentiment — Overall PCR is very high (1.39 > 1.20). Huge put writing across chain.
+2026-05-26 10:37:38 [INFO    ] bot —   🟢 ATM-window PCR bullish (2.46) — Put writing concentrated near ATM (23700).
+2026-05-26 10:37:38 [INFO    ] bot —   ⚠️  Spot (23700) is very close to support (24000). Strong put wall below. Downside likely limited short-term.
+2026-05-26 10:37:38 [WARNING ] bot —   ALERTS:
+2026-05-26 10:37:38 [WARNING ] bot —     SUPPORT ALERT: Spot 23700 ≈ Max Put OI at 24000
+2026-05-26 10:37:38 [INFO    ] bot — Step 4/4 — Saving logs & sending alerts…
+2026-05-26 10:37:38 [INFO    ] bot — ✅ Cycle complete.
+
+2026-05-26 10:37:38 [INFO    ] bot — Next cycle in 47s…
+2026-05-26 10:38:25 [INFO    ] bot — ============================================================
+2026-05-26 10:38:25 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:38:25 IST
+2026-05-26 10:38:25 [INFO    ] bot — ============================================================
+2026-05-26 10:38:25 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:38:25 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:38:25 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 10:38:25 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 10:38:25 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...
+2026-05-26 10:38:32 [INFO    ] downloader — Homepage loaded. Title: NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp; Updates, Quotes- Nseindia.com
+2026-05-26 10:38:32 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 10:38:38 [INFO    ] downloader — Option chain page ready. Title: Option Chain - NSE India
+2026-05-26 10:38:38 [INFO    ] downloader — Clicked NIFTY tab/button
+2026-05-26 10:38:38 [WARNING ] downloader — Expiry dropdown not found -- using page default.
+2026-05-26 10:38:38 [INFO    ] downloader — Looking for Download CSV button...
+2026-05-26 10:38:38 [INFO    ] downloader — Clicked download button: a:has-text('Download (.csv)')
+2026-05-26 10:38:38 [INFO    ] downloader — Archive saved: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_103838.csv (20249 bytes)
+2026-05-26 10:38:38 [INFO    ] downloader — latest.csv updated: /Users/karthikreddy/projects/oi based ai/downloads/latest.csv
+2026-05-26 10:38:38 [INFO    ] downloader — Download successful: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_103838.csv
+2026-05-26 10:38:38 [INFO    ] bot — ✅ CSV ready: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_103838.csv
+2026-05-26 10:38:38 [INFO    ] bot — Step 2/4 — Analysing OI data…
+2026-05-26 10:38:38 [INFO    ] analyzer — Loaded 144 strikes from CSV.
+2026-05-26 10:38:38 [WARNING ] analyzer — Spot price not found in CSV; using middle strike: 23700.0
+2026-05-26 10:38:38 [INFO    ] analyzer — Spot=23700.00  ATM strike=23700
+2026-05-26 10:38:38 [INFO    ] analyzer — Analysis done | PCR=1.39 | ATM=23700 | Resistance=24100 | Support=24000
+2026-05-26 10:38:38 [INFO    ] bot — ✅ Analysis done | Spot=23700 | ATM=23700 | PCR=1.39 | Resistance=24100 | Support=24000
+2026-05-26 10:38:38 [INFO    ] bot — Step 3/4 — Generating signal…
+2026-05-26 10:38:38 [INFO    ] signals — Signal generated: STRONG BULLISH (score=4)
+2026-05-26 10:38:38 [INFO    ] bot — ✅ Signal: 🚀 STRONG BULLISH | PCR: 1.39 | ATM: 23700 | Spot: 23700 | Resistance: 24100 | Support: 24000 | Score: +4
+2026-05-26 10:38:38 [INFO    ] bot —   🟢 Strong bullish sentiment — Overall PCR is very high (1.39 > 1.20). Huge put writing across chain.
+2026-05-26 10:38:38 [INFO    ] bot —   🟢 ATM-window PCR bullish (2.46) — Put writing concentrated near ATM (23700).
+2026-05-26 10:38:38 [INFO    ] bot —   ⚠️  Spot (23700) is very close to support (24000). Strong put wall below. Downside likely limited short-term.
+2026-05-26 10:38:38 [WARNING ] bot —   ALERTS:
+2026-05-26 10:38:38 [WARNING ] bot —     SUPPORT ALERT: Spot 23700 ≈ Max Put OI at 24000
+2026-05-26 10:38:38 [INFO    ] bot — Step 4/4 — Saving logs & sending alerts…
+2026-05-26 10:38:38 [INFO    ] bot — ✅ Cycle complete.
+
+2026-05-26 10:38:38 [INFO    ] bot — Next cycle in 47s…
+2026-05-26 10:39:25 [INFO    ] bot — ============================================================
+2026-05-26 10:39:25 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:39:25 IST
+2026-05-26 10:39:25 [INFO    ] bot — ============================================================
+2026-05-26 10:39:25 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:39:25 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:39:25 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 10:39:25 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 10:39:25 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...
+2026-05-26 10:39:32 [INFO    ] downloader — Homepage loaded. Title: NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp; Updates, Quotes- Nseindia.com
+2026-05-26 10:39:32 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 10:39:38 [INFO    ] downloader — Option chain page ready. Title: Option Chain - NSE India
+2026-05-26 10:39:38 [INFO    ] downloader — Clicked NIFTY tab/button
+2026-05-26 10:39:38 [WARNING ] downloader — Expiry dropdown not found -- using page default.
+2026-05-26 10:39:38 [INFO    ] downloader — Looking for Download CSV button...
+2026-05-26 10:39:38 [INFO    ] downloader — Clicked download button: a:has-text('Download (.csv)')
+2026-05-26 10:39:38 [INFO    ] downloader — Archive saved: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_103938.csv (20211 bytes)
+2026-05-26 10:39:38 [INFO    ] downloader — latest.csv updated: /Users/karthikreddy/projects/oi based ai/downloads/latest.csv
+2026-05-26 10:39:38 [INFO    ] downloader — Download successful: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_103938.csv
+2026-05-26 10:39:38 [INFO    ] bot — ✅ CSV ready: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_103938.csv
+2026-05-26 10:39:38 [INFO    ] bot — Step 2/4 — Analysing OI data…
+2026-05-26 10:39:38 [INFO    ] analyzer — Loaded 144 strikes from CSV.
+2026-05-26 10:39:38 [WARNING ] analyzer — Spot price not found in CSV; using middle strike: 23700.0
+2026-05-26 10:39:38 [INFO    ] analyzer — Spot=23700.00  ATM strike=23700
+2026-05-26 10:39:38 [INFO    ] analyzer — Analysis done | PCR=1.41 | ATM=23700 | Resistance=24100 | Support=24000
+2026-05-26 10:39:38 [INFO    ] bot — ✅ Analysis done | Spot=23700 | ATM=23700 | PCR=1.41 | Resistance=24100 | Support=24000
+2026-05-26 10:39:38 [INFO    ] bot — Step 3/4 — Generating signal…
+2026-05-26 10:39:38 [INFO    ] signals — Signal generated: STRONG BULLISH (score=4)
+2026-05-26 10:39:38 [INFO    ] bot — ✅ Signal: 🚀 STRONG BULLISH | PCR: 1.41 | ATM: 23700 | Spot: 23700 | Resistance: 24100 | Support: 24000 | Score: +4
+2026-05-26 10:39:38 [INFO    ] bot —   🟢 Strong bullish sentiment — Overall PCR is very high (1.41 > 1.20). Huge put writing across chain.
+2026-05-26 10:39:38 [INFO    ] bot —   🟢 ATM-window PCR bullish (2.49) — Put writing concentrated near ATM (23700).
+2026-05-26 10:39:38 [INFO    ] bot —   ⚠️  Spot (23700) is very close to support (24000). Strong put wall below. Downside likely limited short-term.
+2026-05-26 10:39:38 [WARNING ] bot —   ALERTS:
+2026-05-26 10:39:38 [WARNING ] bot —     SUPPORT ALERT: Spot 23700 ≈ Max Put OI at 24000
+2026-05-26 10:39:38 [INFO    ] bot — Step 4/4 — Saving logs & sending alerts…
+2026-05-26 10:39:38 [INFO    ] bot — ✅ Cycle complete.
+
+2026-05-26 10:39:38 [INFO    ] bot — Next cycle in 47s…
+2026-05-26 10:40:25 [INFO    ] bot — ============================================================
+2026-05-26 10:40:25 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:40:25 IST
+2026-05-26 10:40:25 [INFO    ] bot — ============================================================
+2026-05-26 10:40:25 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:40:25 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:40:25 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 10:40:25 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 10:40:25 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...
+2026-05-26 10:40:32 [INFO    ] downloader — Homepage loaded. Title: NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp; Updates, Quotes- Nseindia.com
+2026-05-26 10:40:32 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 10:40:38 [INFO    ] downloader — Option chain page ready. Title: Option Chain - NSE India
+2026-05-26 10:40:38 [INFO    ] downloader — Clicked NIFTY tab/button
+2026-05-26 10:40:38 [WARNING ] downloader — Expiry dropdown not found -- using page default.
+2026-05-26 10:40:38 [INFO    ] downloader — Looking for Download CSV button...
+2026-05-26 10:40:38 [INFO    ] downloader — Clicked download button: a:has-text('Download (.csv)')
+2026-05-26 10:40:38 [INFO    ] downloader — Archive saved: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_104038.csv (20208 bytes)
+2026-05-26 10:40:38 [INFO    ] downloader — latest.csv updated: /Users/karthikreddy/projects/oi based ai/downloads/latest.csv
+2026-05-26 10:40:38 [INFO    ] downloader — Download successful: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_104038.csv
+2026-05-26 10:40:38 [INFO    ] bot — ✅ CSV ready: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_104038.csv
+2026-05-26 10:40:38 [INFO    ] bot — Step 2/4 — Analysing OI data…
+2026-05-26 10:40:38 [INFO    ] analyzer — Loaded 144 strikes from CSV.
+2026-05-26 10:40:38 [WARNING ] analyzer — Spot price not found in CSV; using middle strike: 23700.0
+2026-05-26 10:40:38 [INFO    ] analyzer — Spot=23700.00  ATM strike=23700
+2026-05-26 10:40:38 [INFO    ] analyzer — Analysis done | PCR=1.41 | ATM=23700 | Resistance=24100 | Support=24000
+2026-05-26 10:40:38 [INFO    ] bot — ✅ Analysis done | Spot=23700 | ATM=23700 | PCR=1.41 | Resistance=24100 | Support=24000
+2026-05-26 10:40:38 [INFO    ] bot — Step 3/4 — Generating signal…
+2026-05-26 10:40:38 [INFO    ] signals — Signal generated: STRONG BULLISH (score=4)
+2026-05-26 10:40:38 [INFO    ] bot — ✅ Signal: 🚀 STRONG BULLISH | PCR: 1.41 | ATM: 23700 | Spot: 23700 | Resistance: 24100 | Support: 24000 | Score: +4
+2026-05-26 10:40:38 [INFO    ] bot —   🟢 Strong bullish sentiment — Overall PCR is very high (1.41 > 1.20). Huge put writing across chain.
+2026-05-26 10:40:38 [INFO    ] bot —   🟢 ATM-window PCR bullish (2.51) — Put writing concentrated near ATM (23700).
+2026-05-26 10:40:38 [INFO    ] bot —   ⚠️  Spot (23700) is very close to support (24000). Strong put wall below. Downside likely limited short-term.
+2026-05-26 10:40:38 [WARNING ] bot —   ALERTS:
+2026-05-26 10:40:38 [WARNING ] bot —     SUPPORT ALERT: Spot 23700 ≈ Max Put OI at 24000
+2026-05-26 10:40:38 [INFO    ] bot — Step 4/4 — Saving logs & sending alerts…
+2026-05-26 10:40:38 [INFO    ] bot — ✅ Cycle complete.
+
+2026-05-26 10:40:38 [INFO    ] bot — Next cycle in 47s…
+2026-05-26 10:41:25 [INFO    ] bot — ============================================================
+2026-05-26 10:41:25 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:41:25 IST
+2026-05-26 10:41:25 [INFO    ] bot — ============================================================
+2026-05-26 10:41:25 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:41:25 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:41:25 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 10:41:25 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 10:41:25 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...
+2026-05-26 10:41:32 [INFO    ] downloader — Homepage loaded. Title: NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp; Updates, Quotes- Nseindia.com
+2026-05-26 10:41:32 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 10:41:38 [INFO    ] downloader — Option chain page ready. Title: Option Chain - NSE India
+2026-05-26 10:41:38 [INFO    ] downloader — Clicked NIFTY tab/button
+2026-05-26 10:41:38 [WARNING ] downloader — Expiry dropdown not found -- using page default.
+2026-05-26 10:41:38 [INFO    ] downloader — Looking for Download CSV button...
+2026-05-26 10:41:38 [INFO    ] downloader — Clicked download button: a:has-text('Download (.csv)')
+2026-05-26 10:41:38 [INFO    ] downloader — Archive saved: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_104138.csv (20198 bytes)
+2026-05-26 10:41:38 [INFO    ] downloader — latest.csv updated: /Users/karthikreddy/projects/oi based ai/downloads/latest.csv
+2026-05-26 10:41:38 [INFO    ] downloader — Download successful: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_104138.csv
+2026-05-26 10:41:38 [INFO    ] bot — ✅ CSV ready: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_104138.csv
+2026-05-26 10:41:38 [INFO    ] bot — Step 2/4 — Analysing OI data…
+2026-05-26 10:41:38 [INFO    ] analyzer — Loaded 144 strikes from CSV.
+2026-05-26 10:41:38 [WARNING ] analyzer — Spot price not found in CSV; using middle strike: 23700.0
+2026-05-26 10:41:38 [INFO    ] analyzer — Spot=23700.00  ATM strike=23700
+2026-05-26 10:41:38 [INFO    ] analyzer — Analysis done | PCR=1.43 | ATM=23700 | Resistance=24100 | Support=24000
+2026-05-26 10:41:38 [INFO    ] bot — ✅ Analysis done | Spot=23700 | ATM=23700 | PCR=1.43 | Resistance=24100 | Support=24000
+2026-05-26 10:41:38 [INFO    ] bot — Step 3/4 — Generating signal…
+2026-05-26 10:41:38 [INFO    ] signals — Signal generated: STRONG BULLISH (score=4)
+2026-05-26 10:41:38 [INFO    ] bot — ✅ Signal: 🚀 STRONG BULLISH | PCR: 1.43 | ATM: 23700 | Spot: 23700 | Resistance: 24100 | Support: 24000 | Score: +4
+2026-05-26 10:41:38 [INFO    ] bot —   🟢 Strong bullish sentiment — Overall PCR is very high (1.43 > 1.20). Huge put writing across chain.
+2026-05-26 10:41:38 [INFO    ] bot —   🟢 ATM-window PCR bullish (2.54) — Put writing concentrated near ATM (23700).
+2026-05-26 10:41:38 [INFO    ] bot —   ⚠️  Spot (23700) is very close to support (24000). Strong put wall below. Downside likely limited short-term.
+2026-05-26 10:41:38 [WARNING ] bot —   ALERTS:
+2026-05-26 10:41:38 [WARNING ] bot —     SUPPORT ALERT: Spot 23700 ≈ Max Put OI at 24000
+2026-05-26 10:41:38 [INFO    ] bot — Step 4/4 — Saving logs & sending alerts…
+2026-05-26 10:41:38 [INFO    ] bot — ✅ Cycle complete.
+
+2026-05-26 10:41:38 [INFO    ] bot — Next cycle in 47s…
+2026-05-26 10:42:25 [INFO    ] bot — ============================================================
+2026-05-26 10:42:25 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:42:25 IST
+2026-05-26 10:42:25 [INFO    ] bot — ============================================================
+2026-05-26 10:42:25 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:42:25 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:42:25 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 10:42:25 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 10:42:25 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...
+2026-05-26 10:42:32 [INFO    ] downloader — Homepage loaded. Title: NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp; Updates, Quotes- Nseindia.com
+2026-05-26 10:42:32 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 10:42:38 [INFO    ] downloader — Option chain page ready. Title: Option Chain - NSE India
+2026-05-26 10:42:38 [INFO    ] downloader — Clicked NIFTY tab/button
+2026-05-26 10:42:38 [WARNING ] downloader — Expiry dropdown not found -- using page default.
+2026-05-26 10:42:38 [INFO    ] downloader — Looking for Download CSV button...
+2026-05-26 10:42:38 [INFO    ] downloader — Clicked download button: a:has-text('Download (.csv)')
+2026-05-26 10:42:38 [INFO    ] downloader — Archive saved: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_104238.csv (20202 bytes)
+2026-05-26 10:42:38 [INFO    ] downloader — latest.csv updated: /Users/karthikreddy/projects/oi based ai/downloads/latest.csv
+2026-05-26 10:42:38 [INFO    ] downloader — Download successful: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_104238.csv
+2026-05-26 10:42:38 [INFO    ] bot — ✅ CSV ready: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_104238.csv
+2026-05-26 10:42:38 [INFO    ] bot — Step 2/4 — Analysing OI data…
+2026-05-26 10:42:38 [INFO    ] analyzer — Loaded 144 strikes from CSV.
+2026-05-26 10:42:38 [WARNING ] analyzer — Spot price not found in CSV; using middle strike: 23700.0
+2026-05-26 10:42:38 [INFO    ] analyzer — Spot=23700.00  ATM strike=23700
+2026-05-26 10:42:38 [INFO    ] analyzer — Analysis done | PCR=1.43 | ATM=23700 | Resistance=24100 | Support=24000
+2026-05-26 10:42:38 [INFO    ] bot — ✅ Analysis done | Spot=23700 | ATM=23700 | PCR=1.43 | Resistance=24100 | Support=24000
+2026-05-26 10:42:38 [INFO    ] bot — Step 3/4 — Generating signal…
+2026-05-26 10:42:38 [INFO    ] signals — Signal generated: STRONG BULLISH (score=4)
+2026-05-26 10:42:38 [INFO    ] bot — ✅ Signal: 🚀 STRONG BULLISH | PCR: 1.43 | ATM: 23700 | Spot: 23700 | Resistance: 24100 | Support: 24000 | Score: +4
+2026-05-26 10:42:38 [INFO    ] bot —   🟢 Strong bullish sentiment — Overall PCR is very high (1.43 > 1.20). Huge put writing across chain.
+2026-05-26 10:42:38 [INFO    ] bot —   🟢 ATM-window PCR bullish (2.54) — Put writing concentrated near ATM (23700).
+2026-05-26 10:42:38 [INFO    ] bot —   ⚠️  Spot (23700) is very close to support (24000). Strong put wall below. Downside likely limited short-term.
+2026-05-26 10:42:38 [WARNING ] bot —   ALERTS:
+2026-05-26 10:42:38 [WARNING ] bot —     SUPPORT ALERT: Spot 23700 ≈ Max Put OI at 24000
+2026-05-26 10:42:38 [INFO    ] bot — Step 4/4 — Saving logs & sending alerts…
+2026-05-26 10:42:38 [INFO    ] bot — ✅ Cycle complete.
+
+2026-05-26 10:42:38 [INFO    ] bot — Next cycle in 47s…
+2026-05-26 10:43:25 [INFO    ] bot — ============================================================
+2026-05-26 10:43:25 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:43:25 IST
+2026-05-26 10:43:25 [INFO    ] bot — ============================================================
+2026-05-26 10:43:25 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:43:25 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:43:25 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 10:43:25 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 10:43:25 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...
+2026-05-26 10:48:12 [INFO    ] downloader — Homepage loaded. Title: NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp; Updates, Quotes- Nseindia.com
+2026-05-26 10:48:12 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 10:48:18 [INFO    ] downloader — Option chain page ready. Title: Option Chain - NSE India
+2026-05-26 10:48:18 [INFO    ] downloader — Clicked NIFTY tab/button
+2026-05-26 10:48:18 [WARNING ] downloader — Expiry dropdown not found -- using page default.
+2026-05-26 10:48:18 [INFO    ] downloader — Looking for Download CSV button...
+2026-05-26 10:48:18 [INFO    ] downloader — Clicked download button: a:has-text('Download (.csv)')
+2026-05-26 10:48:18 [INFO    ] downloader — Archive saved: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_104818.csv (20191 bytes)
+2026-05-26 10:48:18 [INFO    ] downloader — latest.csv updated: /Users/karthikreddy/projects/oi based ai/downloads/latest.csv
+2026-05-26 10:48:18 [INFO    ] downloader — Download successful: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_104818.csv
+2026-05-26 10:48:18 [INFO    ] bot — ✅ CSV ready: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_104818.csv
+2026-05-26 10:48:18 [INFO    ] bot — Step 2/4 — Analysing OI data…
+2026-05-26 10:48:18 [INFO    ] analyzer — Loaded 144 strikes from CSV.
+2026-05-26 10:48:18 [WARNING ] analyzer — Spot price not found in CSV; using middle strike: 23700.0
+2026-05-26 10:48:18 [INFO    ] analyzer — Spot=23700.00  ATM strike=23700
+2026-05-26 10:48:18 [INFO    ] analyzer — Analysis done | PCR=1.43 | ATM=23700 | Resistance=24100 | Support=24000
+2026-05-26 10:48:18 [INFO    ] bot — ✅ Analysis done | Spot=23700 | ATM=23700 | PCR=1.43 | Resistance=24100 | Support=24000
+2026-05-26 10:48:18 [INFO    ] bot — Step 3/4 — Generating signal…
+2026-05-26 10:48:18 [INFO    ] signals — Signal generated: STRONG BULLISH (score=4)
+2026-05-26 10:48:18 [INFO    ] bot — ✅ Signal: 🚀 STRONG BULLISH | PCR: 1.43 | ATM: 23700 | Spot: 23700 | Resistance: 24100 | Support: 24000 | Score: +4
+2026-05-26 10:48:18 [INFO    ] bot —   🟢 Strong bullish sentiment — Overall PCR is very high (1.43 > 1.20). Huge put writing across chain.
+2026-05-26 10:48:18 [INFO    ] bot —   🟢 ATM-window PCR bullish (2.56) — Put writing concentrated near ATM (23700).
+2026-05-26 10:48:18 [INFO    ] bot —   ⚠️  Spot (23700) is very close to support (24000). Strong put wall below. Downside likely limited short-term.
+2026-05-26 10:48:18 [WARNING ] bot —   ALERTS:
+2026-05-26 10:48:18 [WARNING ] bot —     SUPPORT ALERT: Spot 23700 ≈ Max Put OI at 24000
+2026-05-26 10:48:18 [INFO    ] bot — Step 4/4 — Saving logs & sending alerts…
+2026-05-26 10:48:18 [INFO    ] bot — ✅ Cycle complete.
+
+2026-05-26 10:48:18 [INFO    ] bot — Next cycle in 47s…
+2026-05-26 10:48:43 [INFO    ] root — Logging initialised. Log file: /Users/karthikreddy/projects/oi based ai/logs/bot.log
+2026-05-26 10:48:43 [INFO    ] bot — 🤖 NIFTY Option Chain CSV Bot starting…
+2026-05-26 10:48:43 [INFO    ] bot — Loop interval: 60s | Market hours: 09:15–15:30 IST
+2026-05-26 10:48:43 [INFO    ] bot — ============================================================
+2026-05-26 10:48:43 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:48:43 IST
+2026-05-26 10:48:43 [INFO    ] bot — ============================================================
+2026-05-26 10:48:43 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:48:43 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:48:43 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 10:48:43 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 10:48:44 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...
+2026-05-26 10:48:51 [INFO    ] downloader — Homepage loaded. Title: NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp; Updates, Quotes- Nseindia.com
+2026-05-26 10:48:51 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 10:48:56 [INFO    ] downloader — Option chain page ready. Title: Option Chain - NSE India
+2026-05-26 10:48:56 [INFO    ] downloader — Clicked NIFTY tab/button
+2026-05-26 10:48:56 [WARNING ] downloader — Expiry dropdown not found -- using page default.
+2026-05-26 10:48:56 [INFO    ] downloader — Looking for Download CSV button...
+2026-05-26 10:48:56 [INFO    ] downloader — Clicked download button: a:has-text('Download (.csv)')
+2026-05-26 10:48:56 [INFO    ] downloader — Archive saved: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_104856.csv (20181 bytes)
+2026-05-26 10:48:56 [INFO    ] downloader — latest.csv updated: /Users/karthikreddy/projects/oi based ai/downloads/latest.csv
+2026-05-26 10:48:56 [INFO    ] downloader — Download successful: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_104856.csv
+2026-05-26 10:48:56 [INFO    ] bot — ✅ CSV ready: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_104856.csv
+2026-05-26 10:48:56 [INFO    ] bot — Step 2/4 — Analysing OI data…
+2026-05-26 10:48:56 [INFO    ] analyzer — Loaded 144 strikes from CSV.
+2026-05-26 10:48:56 [WARNING ] analyzer — Spot price not found in CSV; using middle strike: 23700.0
+2026-05-26 10:48:56 [INFO    ] analyzer — Spot=23700.00  ATM strike=23700
+2026-05-26 10:48:56 [INFO    ] analyzer — Analysis done | PCR=1.43 | ATM=23700 | Resistance=24100 | Support=24000
+2026-05-26 10:48:56 [INFO    ] bot — ✅ Analysis done | Spot=23700 | ATM=23700 | PCR=1.43 | Resistance=24100 | Support=24000
+2026-05-26 10:48:56 [INFO    ] bot — Step 3/4 — Generating signal…
+2026-05-26 10:48:56 [INFO    ] signals — Signal generated: STRONG BULLISH (score=4)
+2026-05-26 10:48:56 [INFO    ] bot — ✅ Signal: 🚀 STRONG BULLISH | PCR: 1.43 | ATM: 23700 | Spot: 23700 | Resistance: 24100 | Support: 24000 | Score: +4
+2026-05-26 10:48:56 [INFO    ] bot —   🟢 Strong bullish sentiment — Overall PCR is very high (1.43 > 1.20). Huge put writing across chain.
+2026-05-26 10:48:56 [INFO    ] bot —   🟢 ATM-window PCR bullish (2.55) — Put writing concentrated near ATM (23700).
+2026-05-26 10:48:56 [INFO    ] bot —   ⚠️  Spot (23700) is very close to support (24000). Strong put wall below. Downside likely limited short-term.
+2026-05-26 10:48:56 [WARNING ] bot —   ALERTS:
+2026-05-26 10:48:56 [WARNING ] bot —     SUPPORT ALERT: Spot 23700 ≈ Max Put OI at 24000
+2026-05-26 10:48:56 [INFO    ] bot — Step 4/4 — Saving logs & sending alerts…
+2026-05-26 10:48:56 [INFO    ] bot — ✅ Cycle complete.
+
+2026-05-26 10:48:56 [INFO    ] bot — Next cycle in 47s…
+2026-05-26 10:49:43 [INFO    ] bot — ============================================================
+2026-05-26 10:49:43 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:49:43 IST
+2026-05-26 10:49:43 [INFO    ] bot — ============================================================
+2026-05-26 10:49:43 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:49:43 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:49:43 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 10:49:43 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 10:49:44 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...
+2026-05-26 10:49:51 [INFO    ] downloader — Homepage loaded. Title: NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp; Updates, Quotes- Nseindia.com
+2026-05-26 10:49:51 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 10:49:56 [INFO    ] downloader — Option chain page ready. Title: Option Chain - NSE India
+2026-05-26 10:49:56 [INFO    ] downloader — Clicked NIFTY tab/button
+2026-05-26 10:49:56 [WARNING ] downloader — Expiry dropdown not found -- using page default.
+2026-05-26 10:49:56 [INFO    ] downloader — Looking for Download CSV button...
+2026-05-26 10:49:57 [INFO    ] downloader — Clicked download button: a:has-text('Download (.csv)')
+2026-05-26 10:49:57 [INFO    ] downloader — Archive saved: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_104956.csv (20143 bytes)
+2026-05-26 10:49:57 [INFO    ] downloader — latest.csv updated: /Users/karthikreddy/projects/oi based ai/downloads/latest.csv
+2026-05-26 10:49:57 [INFO    ] downloader — Download successful: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_104956.csv
+2026-05-26 10:49:57 [INFO    ] bot — ✅ CSV ready: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_104956.csv
+2026-05-26 10:49:57 [INFO    ] bot — Step 2/4 — Analysing OI data…
+2026-05-26 10:49:57 [INFO    ] analyzer — Loaded 144 strikes from CSV.
+2026-05-26 10:49:57 [WARNING ] analyzer — Spot price not found in CSV; using middle strike: 23700.0
+2026-05-26 10:49:57 [INFO    ] analyzer — Spot=23700.00  ATM strike=23700
+2026-05-26 10:49:57 [INFO    ] analyzer — Analysis done | PCR=1.43 | ATM=23700 | Resistance=24100 | Support=24000
+2026-05-26 10:49:57 [INFO    ] bot — ✅ Analysis done | Spot=23700 | ATM=23700 | PCR=1.43 | Resistance=24100 | Support=24000
+2026-05-26 10:49:57 [INFO    ] bot — Step 3/4 — Generating signal…
+2026-05-26 10:49:57 [INFO    ] signals — Signal generated: STRONG BULLISH (score=4)
+2026-05-26 10:49:57 [INFO    ] bot — ✅ Signal: 🚀 STRONG BULLISH | PCR: 1.43 | ATM: 23700 | Spot: 23700 | Resistance: 24100 | Support: 24000 | Score: +4
+2026-05-26 10:49:57 [INFO    ] bot —   🟢 Strong bullish sentiment — Overall PCR is very high (1.43 > 1.20). Huge put writing across chain.
+2026-05-26 10:49:57 [INFO    ] bot —   🟢 ATM-window PCR bullish (2.54) — Put writing concentrated near ATM (23700).
+2026-05-26 10:49:57 [INFO    ] bot —   ⚠️  Spot (23700) is very close to support (24000). Strong put wall below. Downside likely limited short-term.
+2026-05-26 10:49:57 [WARNING ] bot —   ALERTS:
+2026-05-26 10:49:57 [WARNING ] bot —     SUPPORT ALERT: Spot 23700 ≈ Max Put OI at 24000
+2026-05-26 10:49:57 [INFO    ] bot — Step 4/4 — Saving logs & sending alerts…
+2026-05-26 10:49:57 [INFO    ] bot — ✅ Cycle complete.
+
+2026-05-26 10:49:57 [INFO    ] bot — Next cycle in 47s…
+2026-05-26 10:50:43 [INFO    ] bot — ============================================================
+2026-05-26 10:50:43 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:50:43 IST
+2026-05-26 10:50:43 [INFO    ] bot — ============================================================
+2026-05-26 10:50:43 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:50:43 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:50:43 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 10:50:43 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 10:50:44 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...
+2026-05-26 10:50:51 [INFO    ] downloader — Homepage loaded. Title: NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp; Updates, Quotes- Nseindia.com
+2026-05-26 10:50:51 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 10:50:56 [INFO    ] downloader — Option chain page ready. Title: Option Chain - NSE India
+2026-05-26 10:50:56 [INFO    ] downloader — Clicked NIFTY tab/button
+2026-05-26 10:50:56 [WARNING ] downloader — Expiry dropdown not found -- using page default.
+2026-05-26 10:50:56 [INFO    ] downloader — Looking for Download CSV button...
+2026-05-26 10:50:56 [INFO    ] downloader — Clicked download button: a:has-text('Download (.csv)')
+2026-05-26 10:50:56 [INFO    ] downloader — Archive saved: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_105056.csv (20143 bytes)
+2026-05-26 10:50:56 [INFO    ] downloader — latest.csv updated: /Users/karthikreddy/projects/oi based ai/downloads/latest.csv
+2026-05-26 10:50:56 [INFO    ] downloader — Download successful: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_105056.csv
+2026-05-26 10:50:56 [INFO    ] bot — ✅ CSV ready: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_105056.csv
+2026-05-26 10:50:56 [INFO    ] bot — Step 2/4 — Analysing OI data…
+2026-05-26 10:50:56 [INFO    ] analyzer — Loaded 144 strikes from CSV.
+2026-05-26 10:50:56 [WARNING ] analyzer — Spot price not found in CSV; using middle strike: 23700.0
+2026-05-26 10:50:56 [INFO    ] analyzer — Spot=23700.00  ATM strike=23700
+2026-05-26 10:50:56 [INFO    ] analyzer — Analysis done | PCR=1.43 | ATM=23700 | Resistance=24100 | Support=24000
+2026-05-26 10:50:56 [INFO    ] bot — ✅ Analysis done | Spot=23700 | ATM=23700 | PCR=1.43 | Resistance=24100 | Support=24000
+2026-05-26 10:50:56 [INFO    ] bot — Step 3/4 — Generating signal…
+2026-05-26 10:50:56 [INFO    ] signals — Signal generated: STRONG BULLISH (score=4)
+2026-05-26 10:50:56 [INFO    ] bot — ✅ Signal: 🚀 STRONG BULLISH | PCR: 1.43 | ATM: 23700 | Spot: 23700 | Resistance: 24100 | Support: 24000 | Score: +4
+2026-05-26 10:50:56 [INFO    ] bot —   🟢 Strong bullish sentiment — Overall PCR is very high (1.43 > 1.20). Huge put writing across chain.
+2026-05-26 10:50:56 [INFO    ] bot —   🟢 ATM-window PCR bullish (2.54) — Put writing concentrated near ATM (23700).
+2026-05-26 10:50:56 [INFO    ] bot —   ⚠️  Spot (23700) is very close to support (24000). Strong put wall below. Downside likely limited short-term.
+2026-05-26 10:50:56 [WARNING ] bot —   ALERTS:
+2026-05-26 10:50:56 [WARNING ] bot —     SUPPORT ALERT: Spot 23700 ≈ Max Put OI at 24000
+2026-05-26 10:50:56 [INFO    ] bot — Step 4/4 — Saving logs & sending alerts…
+2026-05-26 10:50:56 [INFO    ] bot — ✅ Cycle complete.
+
+2026-05-26 10:50:56 [INFO    ] bot — Next cycle in 47s…
+2026-05-26 10:51:43 [INFO    ] bot — ============================================================
+2026-05-26 10:51:43 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:51:43 IST
+2026-05-26 10:51:43 [INFO    ] bot — ============================================================
+2026-05-26 10:51:43 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:51:43 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:51:43 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 10:51:43 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 10:51:44 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...
+2026-05-26 10:51:51 [INFO    ] downloader — Homepage loaded. Title: NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp; Updates, Quotes- Nseindia.com
+2026-05-26 10:51:51 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 10:51:56 [INFO    ] downloader — Option chain page ready. Title: Option Chain - NSE India
+2026-05-26 10:51:56 [INFO    ] downloader — Clicked NIFTY tab/button
+2026-05-26 10:51:56 [WARNING ] downloader — Expiry dropdown not found -- using page default.
+2026-05-26 10:51:56 [INFO    ] downloader — Looking for Download CSV button...
+2026-05-26 10:51:56 [INFO    ] downloader — Clicked download button: a:has-text('Download (.csv)')
+2026-05-26 10:51:56 [INFO    ] downloader — Archive saved: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_105156.csv (20211 bytes)
+2026-05-26 10:51:56 [INFO    ] downloader — latest.csv updated: /Users/karthikreddy/projects/oi based ai/downloads/latest.csv
+2026-05-26 10:51:56 [INFO    ] downloader — Download successful: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_105156.csv
+2026-05-26 10:51:56 [INFO    ] bot — ✅ CSV ready: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_105156.csv
+2026-05-26 10:51:56 [INFO    ] bot — Step 2/4 — Analysing OI data…
+2026-05-26 10:51:56 [INFO    ] analyzer — Loaded 144 strikes from CSV.
+2026-05-26 10:51:56 [WARNING ] analyzer — Spot price not found in CSV; using middle strike: 23700.0
+2026-05-26 10:51:56 [INFO    ] analyzer — Spot=23700.00  ATM strike=23700
+2026-05-26 10:51:56 [INFO    ] analyzer — Analysis done | PCR=1.43 | ATM=23700 | Resistance=24100 | Support=24000
+2026-05-26 10:51:56 [INFO    ] bot — ✅ Analysis done | Spot=23700 | ATM=23700 | PCR=1.43 | Resistance=24100 | Support=24000
+2026-05-26 10:51:56 [INFO    ] bot — Step 3/4 — Generating signal…
+2026-05-26 10:51:56 [INFO    ] signals — Signal generated: STRONG BULLISH (score=4)
+2026-05-26 10:51:56 [INFO    ] bot — ✅ Signal: 🚀 STRONG BULLISH | PCR: 1.43 | ATM: 23700 | Spot: 23700 | Resistance: 24100 | Support: 24000 | Score: +4
+2026-05-26 10:51:56 [INFO    ] bot —   🟢 Strong bullish sentiment — Overall PCR is very high (1.43 > 1.20). Huge put writing across chain.
+2026-05-26 10:51:56 [INFO    ] bot —   🟢 ATM-window PCR bullish (2.54) — Put writing concentrated near ATM (23700).
+2026-05-26 10:51:56 [INFO    ] bot —   ⚠️  Spot (23700) is very close to support (24000). Strong put wall below. Downside likely limited short-term.
+2026-05-26 10:51:56 [WARNING ] bot —   ALERTS:
+2026-05-26 10:51:56 [WARNING ] bot —     SUPPORT ALERT: Spot 23700 ≈ Max Put OI at 24000
+2026-05-26 10:51:56 [INFO    ] bot — Step 4/4 — Saving logs & sending alerts…
+2026-05-26 10:51:56 [INFO    ] bot — ✅ Cycle complete.
+
+2026-05-26 10:51:56 [INFO    ] bot — Next cycle in 47s…
+2026-05-26 10:52:43 [INFO    ] bot — ============================================================
+2026-05-26 10:52:43 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:52:43 IST
+2026-05-26 10:52:43 [INFO    ] bot — ============================================================
+2026-05-26 10:52:43 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:52:43 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:52:43 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 10:52:43 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 10:52:44 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...
+2026-05-26 10:52:51 [INFO    ] downloader — Homepage loaded. Title: NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp; Updates, Quotes- Nseindia.com
+2026-05-26 10:52:51 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 10:52:56 [INFO    ] downloader — Option chain page ready. Title: Option Chain - NSE India
+2026-05-26 10:52:56 [INFO    ] downloader — Clicked NIFTY tab/button
+2026-05-26 10:52:56 [WARNING ] downloader — Expiry dropdown not found -- using page default.
+2026-05-26 10:52:56 [INFO    ] downloader — Looking for Download CSV button...
+2026-05-26 10:52:57 [INFO    ] downloader — Clicked download button: a:has-text('Download (.csv)')
+2026-05-26 10:52:57 [INFO    ] downloader — Archive saved: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_105256.csv (20200 bytes)
+2026-05-26 10:52:57 [INFO    ] downloader — latest.csv updated: /Users/karthikreddy/projects/oi based ai/downloads/latest.csv
+2026-05-26 10:52:57 [INFO    ] downloader — Download successful: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_105256.csv
+2026-05-26 10:52:57 [INFO    ] bot — ✅ CSV ready: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_105256.csv
+2026-05-26 10:52:57 [INFO    ] bot — Step 2/4 — Analysing OI data…
+2026-05-26 10:52:57 [INFO    ] analyzer — Loaded 144 strikes from CSV.
+2026-05-26 10:52:57 [WARNING ] analyzer — Spot price not found in CSV; using middle strike: 23700.0
+2026-05-26 10:52:57 [INFO    ] analyzer — Spot=23700.00  ATM strike=23700
+2026-05-26 10:52:57 [INFO    ] analyzer — Analysis done | PCR=1.42 | ATM=23700 | Resistance=24100 | Support=24000
+2026-05-26 10:52:57 [INFO    ] bot — ✅ Analysis done | Spot=23700 | ATM=23700 | PCR=1.42 | Resistance=24100 | Support=24000
+2026-05-26 10:52:57 [INFO    ] bot — Step 3/4 — Generating signal…
+2026-05-26 10:52:57 [INFO    ] signals — Signal generated: STRONG BULLISH (score=4)
+2026-05-26 10:52:57 [INFO    ] bot — ✅ Signal: 🚀 STRONG BULLISH | PCR: 1.42 | ATM: 23700 | Spot: 23700 | Resistance: 24100 | Support: 24000 | Score: +4
+2026-05-26 10:52:57 [INFO    ] bot —   🟢 Strong bullish sentiment — Overall PCR is very high (1.42 > 1.20). Huge put writing across chain.
+2026-05-26 10:52:57 [INFO    ] bot —   🟢 ATM-window PCR bullish (2.51) — Put writing concentrated near ATM (23700).
+2026-05-26 10:52:57 [INFO    ] bot —   ⚠️  Spot (23700) is very close to support (24000). Strong put wall below. Downside likely limited short-term.
+2026-05-26 10:52:57 [WARNING ] bot —   ALERTS:
+2026-05-26 10:52:57 [WARNING ] bot —     SUPPORT ALERT: Spot 23700 ≈ Max Put OI at 24000
+2026-05-26 10:52:57 [INFO    ] bot — Step 4/4 — Saving logs & sending alerts…
+2026-05-26 10:52:57 [INFO    ] bot — ✅ Cycle complete.
+
+2026-05-26 10:52:57 [INFO    ] bot — Next cycle in 47s…
+2026-05-26 10:53:43 [INFO    ] bot — ============================================================
+2026-05-26 10:53:43 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:53:43 IST
+2026-05-26 10:53:43 [INFO    ] bot — ============================================================
+2026-05-26 10:53:43 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:53:43 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:53:43 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 10:53:43 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 10:53:44 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...
+2026-05-26 10:53:51 [INFO    ] downloader — Homepage loaded. Title: NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp; Updates, Quotes- Nseindia.com
+2026-05-26 10:53:51 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 10:53:56 [INFO    ] downloader — Option chain page ready. Title: Option Chain - NSE India
+2026-05-26 10:53:56 [INFO    ] downloader — Clicked NIFTY tab/button
+2026-05-26 10:53:56 [WARNING ] downloader — Expiry dropdown not found -- using page default.
+2026-05-26 10:53:56 [INFO    ] downloader — Looking for Download CSV button...
+2026-05-26 10:53:56 [INFO    ] downloader — Clicked download button: a:has-text('Download (.csv)')
+2026-05-26 10:53:56 [INFO    ] downloader — Archive saved: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_105356.csv (20214 bytes)
+2026-05-26 10:53:56 [INFO    ] downloader — latest.csv updated: /Users/karthikreddy/projects/oi based ai/downloads/latest.csv
+2026-05-26 10:53:57 [INFO    ] downloader — Download successful: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_105356.csv
+2026-05-26 10:53:57 [INFO    ] bot — ✅ CSV ready: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_105356.csv
+2026-05-26 10:53:57 [INFO    ] bot — Step 2/4 — Analysing OI data…
+2026-05-26 10:53:57 [INFO    ] analyzer — Loaded 144 strikes from CSV.
+2026-05-26 10:53:57 [WARNING ] analyzer — Spot price not found in CSV; using middle strike: 23700.0
+2026-05-26 10:53:57 [INFO    ] analyzer — Spot=23700.00  ATM strike=23700
+2026-05-26 10:53:57 [INFO    ] analyzer — Analysis done | PCR=1.41 | ATM=23700 | Resistance=24100 | Support=24000
+2026-05-26 10:53:57 [INFO    ] bot — ✅ Analysis done | Spot=23700 | ATM=23700 | PCR=1.41 | Resistance=24100 | Support=24000
+2026-05-26 10:53:57 [INFO    ] bot — Step 3/4 — Generating signal…
+2026-05-26 10:53:57 [INFO    ] signals — Signal generated: STRONG BULLISH (score=4)
+2026-05-26 10:53:57 [INFO    ] bot — ✅ Signal: 🚀 STRONG BULLISH | PCR: 1.41 | ATM: 23700 | Spot: 23700 | Resistance: 24100 | Support: 24000 | Score: +4
+2026-05-26 10:53:57 [INFO    ] bot —   🟢 Strong bullish sentiment — Overall PCR is very high (1.41 > 1.20). Huge put writing across chain.
+2026-05-26 10:53:57 [INFO    ] bot —   🟢 ATM-window PCR bullish (2.50) — Put writing concentrated near ATM (23700).
+2026-05-26 10:53:57 [INFO    ] bot —   ⚠️  Spot (23700) is very close to support (24000). Strong put wall below. Downside likely limited short-term.
+2026-05-26 10:53:57 [WARNING ] bot —   ALERTS:
+2026-05-26 10:53:57 [WARNING ] bot —     SUPPORT ALERT: Spot 23700 ≈ Max Put OI at 24000
+2026-05-26 10:53:57 [INFO    ] bot — Step 4/4 — Saving logs & sending alerts…
+2026-05-26 10:53:57 [INFO    ] bot — ✅ Cycle complete.
+
+2026-05-26 10:53:57 [INFO    ] bot — Next cycle in 47s…
+2026-05-26 10:54:43 [INFO    ] bot — ============================================================
+2026-05-26 10:54:43 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:54:43 IST
+2026-05-26 10:54:43 [INFO    ] bot — ============================================================
+2026-05-26 10:54:43 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:54:43 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:54:43 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 10:54:43 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 10:54:44 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...
+2026-05-26 10:54:51 [INFO    ] downloader — Homepage loaded. Title: NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp; Updates, Quotes- Nseindia.com
+2026-05-26 10:54:51 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 10:54:58 [INFO    ] downloader — Option chain page ready. Title: Option Chain - NSE India
+2026-05-26 10:54:58 [INFO    ] downloader — Clicked NIFTY tab/button
+2026-05-26 10:54:58 [WARNING ] downloader — Expiry dropdown not found -- using page default.
+2026-05-26 10:54:58 [INFO    ] downloader — Looking for Download CSV button...
+2026-05-26 10:54:58 [INFO    ] downloader — Clicked download button: a:has-text('Download (.csv)')
+2026-05-26 10:54:58 [INFO    ] downloader — Archive saved: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_105458.csv (20183 bytes)
+2026-05-26 10:54:58 [INFO    ] downloader — latest.csv updated: /Users/karthikreddy/projects/oi based ai/downloads/latest.csv
+2026-05-26 10:54:58 [INFO    ] downloader — Download successful: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_105458.csv
+2026-05-26 10:54:58 [INFO    ] bot — ✅ CSV ready: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_105458.csv
+2026-05-26 10:54:58 [INFO    ] bot — Step 2/4 — Analysing OI data…
+2026-05-26 10:54:58 [INFO    ] analyzer — Loaded 144 strikes from CSV.
+2026-05-26 10:54:58 [WARNING ] analyzer — Spot price not found in CSV; using middle strike: 23700.0
+2026-05-26 10:54:58 [INFO    ] analyzer — Spot=23700.00  ATM strike=23700
+2026-05-26 10:54:58 [INFO    ] analyzer — Analysis done | PCR=1.40 | ATM=23700 | Resistance=24100 | Support=24000
+2026-05-26 10:54:58 [INFO    ] bot — ✅ Analysis done | Spot=23700 | ATM=23700 | PCR=1.40 | Resistance=24100 | Support=24000
+2026-05-26 10:54:58 [INFO    ] bot — Step 3/4 — Generating signal…
+2026-05-26 10:54:58 [INFO    ] signals — Signal generated: STRONG BULLISH (score=4)
+2026-05-26 10:54:58 [INFO    ] bot — ✅ Signal: 🚀 STRONG BULLISH | PCR: 1.40 | ATM: 23700 | Spot: 23700 | Resistance: 24100 | Support: 24000 | Score: +4
+2026-05-26 10:54:58 [INFO    ] bot —   🟢 Strong bullish sentiment — Overall PCR is very high (1.40 > 1.20). Huge put writing across chain.
+2026-05-26 10:54:58 [INFO    ] bot —   🟢 ATM-window PCR bullish (2.45) — Put writing concentrated near ATM (23700).
+2026-05-26 10:54:58 [INFO    ] bot —   ⚠️  Spot (23700) is very close to support (24000). Strong put wall below. Downside likely limited short-term.
+2026-05-26 10:54:58 [WARNING ] bot —   ALERTS:
+2026-05-26 10:54:58 [WARNING ] bot —     SUPPORT ALERT: Spot 23700 ≈ Max Put OI at 24000
+2026-05-26 10:54:58 [INFO    ] bot — Step 4/4 — Saving logs & sending alerts…
+2026-05-26 10:54:58 [INFO    ] bot — ✅ Cycle complete.
+
+2026-05-26 10:54:58 [INFO    ] bot — Next cycle in 45s…
+2026-05-26 10:55:43 [INFO    ] bot — ============================================================
+2026-05-26 10:55:43 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:55:43 IST
+2026-05-26 10:55:43 [INFO    ] bot — ============================================================
+2026-05-26 10:55:43 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:55:43 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:55:43 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 10:55:43 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 10:55:44 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...
+2026-05-26 10:55:51 [INFO    ] downloader — Homepage loaded. Title: NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp; Updates, Quotes- Nseindia.com
+2026-05-26 10:55:51 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 10:55:59 [INFO    ] downloader — Option chain page ready. Title: Option Chain - NSE India
+2026-05-26 10:55:59 [INFO    ] downloader — Clicked NIFTY tab/button
+2026-05-26 10:55:59 [WARNING ] downloader — Expiry dropdown not found -- using page default.
+2026-05-26 10:55:59 [INFO    ] downloader — Looking for Download CSV button...
+2026-05-26 10:56:00 [INFO    ] downloader — Clicked download button: a:has-text('Download (.csv)')
+2026-05-26 10:56:00 [INFO    ] downloader — Archive saved: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_105559.csv (20185 bytes)
+2026-05-26 10:56:00 [INFO    ] downloader — latest.csv updated: /Users/karthikreddy/projects/oi based ai/downloads/latest.csv
+2026-05-26 10:56:00 [INFO    ] downloader — Download successful: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_105559.csv
+2026-05-26 10:56:00 [INFO    ] bot — ✅ CSV ready: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_105559.csv
+2026-05-26 10:56:00 [INFO    ] bot — Step 2/4 — Analysing OI data…
+2026-05-26 10:56:00 [INFO    ] analyzer — Loaded 144 strikes from CSV.
+2026-05-26 10:56:00 [WARNING ] analyzer — Spot price not found in CSV; using middle strike: 23700.0
+2026-05-26 10:56:00 [INFO    ] analyzer — Spot=23700.00  ATM strike=23700
+2026-05-26 10:56:00 [INFO    ] analyzer — Analysis done | PCR=1.38 | ATM=23700 | Resistance=24100 | Support=24000
+2026-05-26 10:56:00 [INFO    ] bot — ✅ Analysis done | Spot=23700 | ATM=23700 | PCR=1.38 | Resistance=24100 | Support=24000
+2026-05-26 10:56:00 [INFO    ] bot — Step 3/4 — Generating signal…
+2026-05-26 10:56:00 [INFO    ] signals — Signal generated: STRONG BULLISH (score=4)
+2026-05-26 10:56:00 [INFO    ] bot — ✅ Signal: 🚀 STRONG BULLISH | PCR: 1.38 | ATM: 23700 | Spot: 23700 | Resistance: 24100 | Support: 24000 | Score: +4
+2026-05-26 10:56:00 [INFO    ] bot —   🟢 Strong bullish sentiment — Overall PCR is very high (1.38 > 1.20). Huge put writing across chain.
+2026-05-26 10:56:00 [INFO    ] bot —   🟢 ATM-window PCR bullish (2.41) — Put writing concentrated near ATM (23700).
+2026-05-26 10:56:00 [INFO    ] bot —   ⚠️  Spot (23700) is very close to support (24000). Strong put wall below. Downside likely limited short-term.
+2026-05-26 10:56:00 [WARNING ] bot —   ALERTS:
+2026-05-26 10:56:00 [WARNING ] bot —     SUPPORT ALERT: Spot 23700 ≈ Max Put OI at 24000
+2026-05-26 10:56:00 [INFO    ] bot — Step 4/4 — Saving logs & sending alerts…
+2026-05-26 10:56:00 [INFO    ] bot — ✅ Cycle complete.
+
+2026-05-26 10:56:00 [INFO    ] bot — Next cycle in 44s…
+2026-05-26 10:56:43 [INFO    ] bot — ============================================================
+2026-05-26 10:56:43 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:56:43 IST
+2026-05-26 10:56:43 [INFO    ] bot — ============================================================
+2026-05-26 10:56:43 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:56:43 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:56:43 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 10:56:43 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 10:56:44 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...
+2026-05-26 10:56:51 [INFO    ] downloader — Homepage loaded. Title: NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp; Updates, Quotes- Nseindia.com
+2026-05-26 10:56:51 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 10:56:56 [INFO    ] downloader — Option chain page ready. Title: Option Chain - NSE India
+2026-05-26 10:56:56 [INFO    ] downloader — Clicked NIFTY tab/button
+2026-05-26 10:56:56 [WARNING ] downloader — Expiry dropdown not found -- using page default.
+2026-05-26 10:56:56 [INFO    ] downloader — Looking for Download CSV button...
+2026-05-26 10:56:56 [INFO    ] downloader — Clicked download button: a:has-text('Download (.csv)')
+2026-05-26 10:56:57 [INFO    ] downloader — Archive saved: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_105656.csv (20282 bytes)
+2026-05-26 10:56:57 [INFO    ] downloader — latest.csv updated: /Users/karthikreddy/projects/oi based ai/downloads/latest.csv
+2026-05-26 10:56:57 [INFO    ] downloader — Download successful: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_105656.csv
+2026-05-26 10:56:57 [INFO    ] bot — ✅ CSV ready: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_105656.csv
+2026-05-26 10:56:57 [INFO    ] bot — Step 2/4 — Analysing OI data…
+2026-05-26 10:56:57 [INFO    ] analyzer — Loaded 144 strikes from CSV.
+2026-05-26 10:56:57 [WARNING ] analyzer — Spot price not found in CSV; using middle strike: 23700.0
+2026-05-26 10:56:57 [INFO    ] analyzer — Spot=23700.00  ATM strike=23700
+2026-05-26 10:56:57 [INFO    ] analyzer — Analysis done | PCR=1.38 | ATM=23700 | Resistance=24100 | Support=24000
+2026-05-26 10:56:57 [INFO    ] bot — ✅ Analysis done | Spot=23700 | ATM=23700 | PCR=1.38 | Resistance=24100 | Support=24000
+2026-05-26 10:56:57 [INFO    ] bot — Step 3/4 — Generating signal…
+2026-05-26 10:56:57 [INFO    ] signals — Signal generated: STRONG BULLISH (score=4)
+2026-05-26 10:56:57 [INFO    ] bot — ✅ Signal: 🚀 STRONG BULLISH | PCR: 1.38 | ATM: 23700 | Spot: 23700 | Resistance: 24100 | Support: 24000 | Score: +4
+2026-05-26 10:56:57 [INFO    ] bot —   🟢 Strong bullish sentiment — Overall PCR is very high (1.38 > 1.20). Huge put writing across chain.
+2026-05-26 10:56:57 [INFO    ] bot —   🟢 ATM-window PCR bullish (2.41) — Put writing concentrated near ATM (23700).
+2026-05-26 10:56:57 [INFO    ] bot —   ⚠️  Spot (23700) is very close to support (24000). Strong put wall below. Downside likely limited short-term.
+2026-05-26 10:56:57 [WARNING ] bot —   ALERTS:
+2026-05-26 10:56:57 [WARNING ] bot —     SUPPORT ALERT: Spot 23700 ≈ Max Put OI at 24000
+2026-05-26 10:56:57 [INFO    ] bot — Step 4/4 — Saving logs & sending alerts…
+2026-05-26 10:56:57 [INFO    ] bot — ✅ Cycle complete.
+
+2026-05-26 10:56:57 [INFO    ] bot — Next cycle in 47s…
+2026-05-26 10:57:43 [INFO    ] bot — ============================================================
+2026-05-26 10:57:43 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:57:43 IST
+2026-05-26 10:57:43 [INFO    ] bot — ============================================================
+2026-05-26 10:57:43 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:57:43 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:57:43 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 10:57:43 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 10:57:44 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...
+2026-05-26 10:57:51 [INFO    ] downloader — Homepage loaded. Title: NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp; Updates, Quotes- Nseindia.com
+2026-05-26 10:57:51 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 10:57:56 [INFO    ] downloader — Option chain page ready. Title: Option Chain - NSE India
+2026-05-26 10:57:56 [INFO    ] downloader — Clicked NIFTY tab/button
+2026-05-26 10:57:57 [WARNING ] downloader — Expiry dropdown not found -- using page default.
+2026-05-26 10:57:57 [INFO    ] downloader — Looking for Download CSV button...
+2026-05-26 10:57:57 [INFO    ] downloader — Clicked download button: a:has-text('Download (.csv)')
+2026-05-26 10:57:57 [INFO    ] downloader — Archive saved: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_105757.csv (20261 bytes)
+2026-05-26 10:57:57 [INFO    ] downloader — latest.csv updated: /Users/karthikreddy/projects/oi based ai/downloads/latest.csv
+2026-05-26 10:57:57 [INFO    ] downloader — Download successful: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_105757.csv
+2026-05-26 10:57:57 [INFO    ] bot — ✅ CSV ready: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_105757.csv
+2026-05-26 10:57:57 [INFO    ] bot — Step 2/4 — Analysing OI data…
+2026-05-26 10:57:57 [INFO    ] analyzer — Loaded 144 strikes from CSV.
+2026-05-26 10:57:57 [WARNING ] analyzer — Spot price not found in CSV; using middle strike: 23700.0
+2026-05-26 10:57:57 [INFO    ] analyzer — Spot=23700.00  ATM strike=23700
+2026-05-26 10:57:57 [INFO    ] analyzer — Analysis done | PCR=1.38 | ATM=23700 | Resistance=24100 | Support=24000
+2026-05-26 10:57:57 [INFO    ] bot — ✅ Analysis done | Spot=23700 | ATM=23700 | PCR=1.39 | Resistance=24100 | Support=24000
+2026-05-26 10:57:57 [INFO    ] bot — Step 3/4 — Generating signal…
+2026-05-26 10:57:57 [INFO    ] signals — Signal generated: STRONG BULLISH (score=4)
+2026-05-26 10:57:57 [INFO    ] bot — ✅ Signal: 🚀 STRONG BULLISH | PCR: 1.39 | ATM: 23700 | Spot: 23700 | Resistance: 24100 | Support: 24000 | Score: +4
+2026-05-26 10:57:57 [INFO    ] bot —   🟢 Strong bullish sentiment — Overall PCR is very high (1.39 > 1.20). Huge put writing across chain.
+2026-05-26 10:57:57 [INFO    ] bot —   🟢 ATM-window PCR bullish (2.41) — Put writing concentrated near ATM (23700).
+2026-05-26 10:57:57 [INFO    ] bot —   ⚠️  Spot (23700) is very close to support (24000). Strong put wall below. Downside likely limited short-term.
+2026-05-26 10:57:57 [WARNING ] bot —   ALERTS:
+2026-05-26 10:57:57 [WARNING ] bot —     SUPPORT ALERT: Spot 23700 ≈ Max Put OI at 24000
+2026-05-26 10:57:57 [INFO    ] bot — Step 4/4 — Saving logs & sending alerts…
+2026-05-26 10:57:57 [INFO    ] bot — ✅ Cycle complete.
+
+2026-05-26 10:57:57 [INFO    ] bot — Next cycle in 47s…
+2026-05-26 10:58:43 [INFO    ] bot — ============================================================
+2026-05-26 10:58:43 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:58:43 IST
+2026-05-26 10:58:43 [INFO    ] bot — ============================================================
+2026-05-26 10:58:43 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:58:43 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:58:43 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 10:58:43 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 10:58:44 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...
+2026-05-26 10:58:51 [INFO    ] downloader — Homepage loaded. Title: NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp; Updates, Quotes- Nseindia.com
+2026-05-26 10:58:51 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 10:58:56 [INFO    ] downloader — Option chain page ready. Title: Option Chain - NSE India
+2026-05-26 10:58:56 [INFO    ] downloader — Clicked NIFTY tab/button
+2026-05-26 10:58:56 [WARNING ] downloader — Expiry dropdown not found -- using page default.
+2026-05-26 10:58:56 [INFO    ] downloader — Looking for Download CSV button...
+2026-05-26 10:58:56 [INFO    ] downloader — Clicked download button: a:has-text('Download (.csv)')
+2026-05-26 10:58:56 [INFO    ] downloader — Archive saved: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_105856.csv (20234 bytes)
+2026-05-26 10:58:56 [INFO    ] downloader — latest.csv updated: /Users/karthikreddy/projects/oi based ai/downloads/latest.csv
+2026-05-26 10:58:56 [INFO    ] downloader — Download successful: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_105856.csv
+2026-05-26 10:58:56 [INFO    ] bot — ✅ CSV ready: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_105856.csv
+2026-05-26 10:58:56 [INFO    ] bot — Step 2/4 — Analysing OI data…
+2026-05-26 10:58:56 [INFO    ] analyzer — Loaded 144 strikes from CSV.
+2026-05-26 10:58:56 [WARNING ] analyzer — Spot price not found in CSV; using middle strike: 23700.0
+2026-05-26 10:58:56 [INFO    ] analyzer — Spot=23700.00  ATM strike=23700
+2026-05-26 10:58:56 [INFO    ] analyzer — Analysis done | PCR=1.38 | ATM=23700 | Resistance=24100 | Support=24000
+2026-05-26 10:58:56 [INFO    ] bot — ✅ Analysis done | Spot=23700 | ATM=23700 | PCR=1.38 | Resistance=24100 | Support=24000
+2026-05-26 10:58:56 [INFO    ] bot — Step 3/4 — Generating signal…
+2026-05-26 10:58:56 [INFO    ] signals — Signal generated: STRONG BULLISH (score=4)
+2026-05-26 10:58:56 [INFO    ] bot — ✅ Signal: 🚀 STRONG BULLISH | PCR: 1.38 | ATM: 23700 | Spot: 23700 | Resistance: 24100 | Support: 24000 | Score: +4
+2026-05-26 10:58:56 [INFO    ] bot —   🟢 Strong bullish sentiment — Overall PCR is very high (1.38 > 1.20). Huge put writing across chain.
+2026-05-26 10:58:56 [INFO    ] bot —   🟢 ATM-window PCR bullish (2.41) — Put writing concentrated near ATM (23700).
+2026-05-26 10:58:56 [INFO    ] bot —   ⚠️  Spot (23700) is very close to support (24000). Strong put wall below. Downside likely limited short-term.
+2026-05-26 10:58:56 [WARNING ] bot —   ALERTS:
+2026-05-26 10:58:56 [WARNING ] bot —     SUPPORT ALERT: Spot 23700 ≈ Max Put OI at 24000
+2026-05-26 10:58:56 [INFO    ] bot — Step 4/4 — Saving logs & sending alerts…
+2026-05-26 10:58:56 [INFO    ] bot — ✅ Cycle complete.
+
+2026-05-26 10:58:56 [INFO    ] bot — Next cycle in 47s…
+2026-05-26 10:59:43 [INFO    ] bot — ============================================================
+2026-05-26 10:59:43 [INFO    ] bot — ▶  Cycle started at 2026-05-26 10:59:43 IST
+2026-05-26 10:59:43 [INFO    ] bot — ============================================================
+2026-05-26 10:59:43 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 10:59:43 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 10:59:43 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 10:59:43 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 10:59:44 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...
+2026-05-26 10:59:51 [INFO    ] downloader — Homepage loaded. Title: NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp; Updates, Quotes- Nseindia.com
+2026-05-26 10:59:51 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 10:59:56 [INFO    ] downloader — Option chain page ready. Title: Option Chain - NSE India
+2026-05-26 10:59:56 [INFO    ] downloader — Clicked NIFTY tab/button
+2026-05-26 10:59:56 [WARNING ] downloader — Expiry dropdown not found -- using page default.
+2026-05-26 10:59:56 [INFO    ] downloader — Looking for Download CSV button...
+2026-05-26 10:59:56 [INFO    ] downloader — Clicked download button: a:has-text('Download (.csv)')
+2026-05-26 10:59:56 [INFO    ] downloader — Archive saved: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_105956.csv (20189 bytes)
+2026-05-26 10:59:56 [INFO    ] downloader — latest.csv updated: /Users/karthikreddy/projects/oi based ai/downloads/latest.csv
+2026-05-26 10:59:57 [INFO    ] downloader — Download successful: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_105956.csv
+2026-05-26 10:59:57 [INFO    ] bot — ✅ CSV ready: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_105956.csv
+2026-05-26 10:59:57 [INFO    ] bot — Step 2/4 — Analysing OI data…
+2026-05-26 10:59:57 [INFO    ] analyzer — Loaded 144 strikes from CSV.
+2026-05-26 10:59:57 [WARNING ] analyzer — Spot price not found in CSV; using middle strike: 23700.0
+2026-05-26 10:59:57 [INFO    ] analyzer — Spot=23700.00  ATM strike=23700
+2026-05-26 10:59:57 [INFO    ] analyzer — Analysis done | PCR=1.38 | ATM=23700 | Resistance=24100 | Support=24000
+2026-05-26 10:59:57 [INFO    ] bot — ✅ Analysis done | Spot=23700 | ATM=23700 | PCR=1.38 | Resistance=24100 | Support=24000
+2026-05-26 10:59:57 [INFO    ] bot — Step 3/4 — Generating signal…
+2026-05-26 10:59:57 [INFO    ] signals — Signal generated: STRONG BULLISH (score=4)
+2026-05-26 10:59:57 [INFO    ] bot — ✅ Signal: 🚀 STRONG BULLISH | PCR: 1.38 | ATM: 23700 | Spot: 23700 | Resistance: 24100 | Support: 24000 | Score: +4
+2026-05-26 10:59:57 [INFO    ] bot —   🟢 Strong bullish sentiment — Overall PCR is very high (1.38 > 1.20). Huge put writing across chain.
+2026-05-26 10:59:57 [INFO    ] bot —   🟢 ATM-window PCR bullish (2.40) — Put writing concentrated near ATM (23700).
+2026-05-26 10:59:57 [INFO    ] bot —   ⚠️  Spot (23700) is very close to support (24000). Strong put wall below. Downside likely limited short-term.
+2026-05-26 10:59:57 [WARNING ] bot —   ALERTS:
+2026-05-26 10:59:57 [WARNING ] bot —     SUPPORT ALERT: Spot 23700 ≈ Max Put OI at 24000
+2026-05-26 10:59:57 [INFO    ] bot — Step 4/4 — Saving logs & sending alerts…
+2026-05-26 10:59:57 [INFO    ] bot — ✅ Cycle complete.
+
+2026-05-26 10:59:57 [INFO    ] bot — Next cycle in 47s…
+2026-05-26 11:00:43 [INFO    ] bot — ============================================================
+2026-05-26 11:00:43 [INFO    ] bot — ▶  Cycle started at 2026-05-26 11:00:43 IST
+2026-05-26 11:00:43 [INFO    ] bot — ============================================================
+2026-05-26 11:00:43 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 11:00:43 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 11:00:43 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 11:00:43 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 11:00:44 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...
+2026-05-26 11:00:51 [INFO    ] downloader — Homepage loaded. Title: NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp; Updates, Quotes- Nseindia.com
+2026-05-26 11:00:51 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 11:00:58 [INFO    ] downloader — Option chain page ready. Title: Option Chain - NSE India
+2026-05-26 11:00:58 [INFO    ] downloader — Clicked NIFTY tab/button
+2026-05-26 11:00:58 [WARNING ] downloader — Expiry dropdown not found -- using page default.
+2026-05-26 11:00:58 [INFO    ] downloader — Looking for Download CSV button...
+2026-05-26 11:00:58 [INFO    ] downloader — Clicked download button: a:has-text('Download (.csv)')
+2026-05-26 11:00:58 [INFO    ] downloader — Archive saved: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_110058.csv (20193 bytes)
+2026-05-26 11:00:58 [INFO    ] downloader — latest.csv updated: /Users/karthikreddy/projects/oi based ai/downloads/latest.csv
+2026-05-26 11:00:58 [INFO    ] downloader — Download successful: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_110058.csv
+2026-05-26 11:00:58 [INFO    ] bot — ✅ CSV ready: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_110058.csv
+2026-05-26 11:00:58 [INFO    ] bot — Step 2/4 — Analysing OI data…
+2026-05-26 11:00:58 [INFO    ] analyzer — Loaded 144 strikes from CSV.
+2026-05-26 11:00:58 [WARNING ] analyzer — Spot price not found in CSV; using middle strike: 23700.0
+2026-05-26 11:00:58 [INFO    ] analyzer — Spot=23700.00  ATM strike=23700
+2026-05-26 11:00:58 [INFO    ] analyzer — Analysis done | PCR=1.38 | ATM=23700 | Resistance=24100 | Support=24000
+2026-05-26 11:00:58 [INFO    ] bot — ✅ Analysis done | Spot=23700 | ATM=23700 | PCR=1.38 | Resistance=24100 | Support=24000
+2026-05-26 11:00:58 [INFO    ] bot — Step 3/4 — Generating signal…
+2026-05-26 11:00:58 [INFO    ] signals — Signal generated: STRONG BULLISH (score=4)
+2026-05-26 11:00:58 [INFO    ] bot — ✅ Signal: 🚀 STRONG BULLISH | PCR: 1.38 | ATM: 23700 | Spot: 23700 | Resistance: 24100 | Support: 24000 | Score: +4
+2026-05-26 11:00:58 [INFO    ] bot —   🟢 Strong bullish sentiment — Overall PCR is very high (1.38 > 1.20). Huge put writing across chain.
+2026-05-26 11:00:58 [INFO    ] bot —   🟢 ATM-window PCR bullish (2.40) — Put writing concentrated near ATM (23700).
+2026-05-26 11:00:58 [INFO    ] bot —   ⚠️  Spot (23700) is very close to support (24000). Strong put wall below. Downside likely limited short-term.
+2026-05-26 11:00:58 [WARNING ] bot —   ALERTS:
+2026-05-26 11:00:58 [WARNING ] bot —     SUPPORT ALERT: Spot 23700 ≈ Max Put OI at 24000
+2026-05-26 11:00:58 [INFO    ] bot — Step 4/4 — Saving logs & sending alerts…
+2026-05-26 11:00:58 [INFO    ] bot — ✅ Cycle complete.
+
+2026-05-26 11:00:58 [INFO    ] bot — Next cycle in 45s…
+2026-05-26 11:01:43 [INFO    ] bot — ============================================================
+2026-05-26 11:01:43 [INFO    ] bot — ▶  Cycle started at 2026-05-26 11:01:43 IST
+2026-05-26 11:01:43 [INFO    ] bot — ============================================================
+2026-05-26 11:01:43 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 11:01:44 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 11:01:44 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 11:01:44 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 11:01:44 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...
+2026-05-26 11:01:51 [INFO    ] downloader — Homepage loaded. Title: NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp; Updates, Quotes- Nseindia.com
+2026-05-26 11:01:51 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 11:01:57 [INFO    ] downloader — Option chain page ready. Title: Option Chain - NSE India
+2026-05-26 11:01:57 [INFO    ] downloader — Clicked NIFTY tab/button
+2026-05-26 11:01:57 [WARNING ] downloader — Expiry dropdown not found -- using page default.
+2026-05-26 11:01:57 [INFO    ] downloader — Looking for Download CSV button...
+2026-05-26 11:01:57 [INFO    ] downloader — Clicked download button: a:has-text('Download (.csv)')
+2026-05-26 11:01:57 [INFO    ] downloader — Archive saved: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_110157.csv (20175 bytes)
+2026-05-26 11:01:57 [INFO    ] downloader — latest.csv updated: /Users/karthikreddy/projects/oi based ai/downloads/latest.csv
+2026-05-26 11:01:57 [INFO    ] downloader — Download successful: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_110157.csv
+2026-05-26 11:01:57 [INFO    ] bot — ✅ CSV ready: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_110157.csv
+2026-05-26 11:01:57 [INFO    ] bot — Step 2/4 — Analysing OI data…
+2026-05-26 11:01:57 [INFO    ] analyzer — Loaded 144 strikes from CSV.
+2026-05-26 11:01:57 [WARNING ] analyzer — Spot price not found in CSV; using middle strike: 23700.0
+2026-05-26 11:01:57 [INFO    ] analyzer — Spot=23700.00  ATM strike=23700
+2026-05-26 11:01:57 [INFO    ] analyzer — Analysis done | PCR=1.38 | ATM=23700 | Resistance=24100 | Support=24000
+2026-05-26 11:01:57 [INFO    ] bot — ✅ Analysis done | Spot=23700 | ATM=23700 | PCR=1.38 | Resistance=24100 | Support=24000
+2026-05-26 11:01:57 [INFO    ] bot — Step 3/4 — Generating signal…
+2026-05-26 11:01:57 [INFO    ] signals — Signal generated: STRONG BULLISH (score=4)
+2026-05-26 11:01:57 [INFO    ] bot — ✅ Signal: 🚀 STRONG BULLISH | PCR: 1.38 | ATM: 23700 | Spot: 23700 | Resistance: 24100 | Support: 24000 | Score: +4
+2026-05-26 11:01:57 [INFO    ] bot —   🟢 Strong bullish sentiment — Overall PCR is very high (1.38 > 1.20). Huge put writing across chain.
+2026-05-26 11:01:57 [INFO    ] bot —   🟢 ATM-window PCR bullish (2.39) — Put writing concentrated near ATM (23700).
+2026-05-26 11:01:57 [INFO    ] bot —   ⚠️  Spot (23700) is very close to support (24000). Strong put wall below. Downside likely limited short-term.
+2026-05-26 11:01:57 [WARNING ] bot —   ALERTS:
+2026-05-26 11:01:57 [WARNING ] bot —     SUPPORT ALERT: Spot 23700 ≈ Max Put OI at 24000
+2026-05-26 11:01:57 [INFO    ] bot — Step 4/4 — Saving logs & sending alerts…
+2026-05-26 11:01:57 [INFO    ] bot — ✅ Cycle complete.
+
+2026-05-26 11:01:57 [INFO    ] bot — Next cycle in 46s…
+2026-05-26 11:02:43 [INFO    ] bot — ============================================================
+2026-05-26 11:02:43 [INFO    ] bot — ▶  Cycle started at 2026-05-26 11:02:43 IST
+2026-05-26 11:02:43 [INFO    ] bot — ============================================================
+2026-05-26 11:02:43 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 11:02:43 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 11:02:43 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 11:02:43 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 11:02:44 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...
+2026-05-26 11:02:51 [INFO    ] downloader — Homepage loaded. Title: NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp; Updates, Quotes- Nseindia.com
+2026-05-26 11:02:51 [INFO    ] downloader — Phase 2: Navigating to NSE Option Chain page...
+2026-05-26 11:02:56 [INFO    ] downloader — Option chain page ready. Title: Option Chain - NSE India
+2026-05-26 11:02:56 [INFO    ] downloader — Clicked NIFTY tab/button
+2026-05-26 11:02:56 [WARNING ] downloader — Expiry dropdown not found -- using page default.
+2026-05-26 11:02:56 [INFO    ] downloader — Looking for Download CSV button...
+2026-05-26 11:02:56 [INFO    ] downloader — Clicked download button: a:has-text('Download (.csv)')
+2026-05-26 11:02:56 [INFO    ] downloader — Archive saved: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_110256.csv (20228 bytes)
+2026-05-26 11:02:56 [INFO    ] downloader — latest.csv updated: /Users/karthikreddy/projects/oi based ai/downloads/latest.csv
+2026-05-26 11:02:57 [INFO    ] downloader — Download successful: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_110256.csv
+2026-05-26 11:02:57 [INFO    ] bot — ✅ CSV ready: /Users/karthikreddy/projects/oi based ai/downloads/2026-05-26/nifty_option_chain_110256.csv
+2026-05-26 11:02:57 [INFO    ] bot — Step 2/4 — Analysing OI data…
+2026-05-26 11:02:57 [INFO    ] analyzer — Loaded 144 strikes from CSV.
+2026-05-26 11:02:57 [WARNING ] analyzer — Spot price not found in CSV; using middle strike: 23700.0
+2026-05-26 11:02:57 [INFO    ] analyzer — Spot=23700.00  ATM strike=23700
+2026-05-26 11:02:57 [INFO    ] analyzer — Analysis done | PCR=1.38 | ATM=23700 | Resistance=24100 | Support=24000
+2026-05-26 11:02:57 [INFO    ] bot — ✅ Analysis done | Spot=23700 | ATM=23700 | PCR=1.38 | Resistance=24100 | Support=24000
+2026-05-26 11:02:57 [INFO    ] bot — Step 3/4 — Generating signal…
+2026-05-26 11:02:57 [INFO    ] signals — Signal generated: STRONG BULLISH (score=4)
+2026-05-26 11:02:57 [INFO    ] bot — ✅ Signal: 🚀 STRONG BULLISH | PCR: 1.38 | ATM: 23700 | Spot: 23700 | Resistance: 24100 | Support: 24000 | Score: +4
+2026-05-26 11:02:57 [INFO    ] bot —   🟢 Strong bullish sentiment — Overall PCR is very high (1.38 > 1.20). Huge put writing across chain.
+2026-05-26 11:02:57 [INFO    ] bot —   🟢 ATM-window PCR bullish (2.40) — Put writing concentrated near ATM (23700).
+2026-05-26 11:02:57 [INFO    ] bot —   ⚠️  Spot (23700) is very close to support (24000). Strong put wall below. Downside likely limited short-term.
+2026-05-26 11:02:57 [WARNING ] bot —   ALERTS:
+2026-05-26 11:02:57 [WARNING ] bot —     SUPPORT ALERT: Spot 23700 ≈ Max Put OI at 24000
+2026-05-26 11:02:57 [INFO    ] bot — Step 4/4 — Saving logs & sending alerts…
+2026-05-26 11:02:57 [INFO    ] bot — ✅ Cycle complete.
+
+2026-05-26 11:02:57 [INFO    ] bot — Next cycle in 47s…
+2026-05-26 11:03:43 [INFO    ] bot — ============================================================
+2026-05-26 11:03:43 [INFO    ] bot — ▶  Cycle started at 2026-05-26 11:03:43 IST
+2026-05-26 11:03:43 [INFO    ] bot — ============================================================
+2026-05-26 11:03:43 [INFO    ] bot — Step 1/4 — Downloading option chain CSV…
+2026-05-26 11:03:43 [INFO    ] downloader — Download attempt 1 / 3
+2026-05-26 11:03:43 [INFO    ] downloader — Using real Google Chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2026-05-26 11:03:43 [INFO    ] downloader — Launching browser (headless=True, chrome=True)...
+2026-05-26 11:03:44 [INFO    ] downloader — Phase 1: Visiting NSE homepage to establish session...

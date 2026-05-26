@@ -1,6 +1,17 @@
-requests==2.31.0
-pandas==2.2.0
-schedule==1.2.1
-pytz==2024.1
-SQLAlchemy==2.0.25
-psycopg2-binary==2.9.9
+# ─── Core dependencies ─────────────────────────────────────────────────────────
+pandas>=2.2.0
+playwright>=1.44.0
+playwright-stealth>=2.0.0
+pytz>=2024.1
+
+# ─── Scheduling (legacy main.py uses this) ──────────────────────────────────────
+schedule>=1.2.1
+
+# ─── Database (legacy db.py layer) ─────────────────────────────────────────────
+SQLAlchemy>=2.0.25
+psycopg2-binary>=2.9.9
+
+# ─── Optional: Telegram alerts ─────────────────────────────────────────────────
+# Install this if you want Telegram notifications:
+#   pip install aiohttp
+# aiohttp>=3.9.0
